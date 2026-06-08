@@ -1,0 +1,14 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "alertsApiEndpoint",
+          "type": "text",
+          "label": "Alerts API Endpoint",
+          "defaultValue": ""
+        }
+      ]
+    }
+  ]
+}

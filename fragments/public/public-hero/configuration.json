@@ -1,0 +1,46 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "alignment",
+          "type": "select",
+          "label": "Text Alignment",
+          "defaultValue": "left",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "left",
+                "label": "Left Align"
+              },
+              {
+                "value": "center",
+                "label": "Center Align"
+              }
+            ]
+          }
+        },
+        {
+          "name": "overlayStyle",
+          "type": "select",
+          "label": "Overlay Gradient",
+          "defaultValue": "navy-amber",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "navy-amber",
+                "label": "Deep Navy to Amber Spark"
+              },
+              {
+                "value": "steel-glow",
+                "label": "Dark Steel Blue Glow"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

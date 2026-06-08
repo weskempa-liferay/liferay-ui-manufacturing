@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60" width="120" height="60">
+  <rect width="120" height="60" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="5" y="8" width="24" height="44" rx="4" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="33" y="8" width="24" height="44" rx="4" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="61" y="8" width="24" height="44" rx="4" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="89" y="8" width="24" height="44" rx="4" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="9" y="14" width="8" height="8" rx="2" fill="#0B1B3D" opacity="0.1"/>
+  <rect x="37" y="14" width="8" height="8" rx="2" fill="#3b82f6" opacity="0.1"/>
+  <rect x="65" y="14" width="8" height="8" rx="2" fill="#FF6B00" opacity="0.1"/>
+  <rect x="93" y="14" width="8" height="8" rx="2" fill="#ef4444" opacity="0.1"/>
+  <text x="17" y="38" text-anchor="middle" fill="#0B1B3D" font-size="12" font-weight="800" font-family="sans-serif">47</text>
+  <text x="45" y="38" text-anchor="middle" fill="#0B1B3D" font-size="12" font-weight="800" font-family="sans-serif">12</text>
+  <text x="73" y="38" text-anchor="middle" fill="#0B1B3D" font-size="12" font-weight="800" font-family="sans-serif">8</text>
+  <text x="101" y="38" text-anchor="middle" fill="#0B1B3D" font-size="12" font-weight="800" font-family="sans-serif">5</text>
+</svg>

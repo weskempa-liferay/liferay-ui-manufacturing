@@ -1,0 +1,33 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "showSidebar",
+          "type": "checkbox",
+          "label": "Show Careers Sidebar",
+          "defaultValue": true
+        },
+        {
+          "name": "themeType",
+          "type": "select",
+          "label": "Background Theme",
+          "defaultValue": "light-gradient",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "light-gradient",
+                "label": "Elegant Warm Light Gradient"
+              },
+              {
+                "value": "dark-industrial",
+                "label": "Deep Corporate Dark"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

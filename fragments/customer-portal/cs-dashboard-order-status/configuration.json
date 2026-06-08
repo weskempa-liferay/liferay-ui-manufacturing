@@ -1,0 +1,14 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "ordersApiEndpoint",
+          "type": "text",
+          "label": "Orders API Endpoint",
+          "defaultValue": ""
+        }
+      ]
+    }
+  ]
+}

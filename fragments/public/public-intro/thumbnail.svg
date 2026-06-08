@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100" height="100">
+  <rect width="120" height="120" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+  <!-- Quote Block mockup -->
+  <rect x="15" y="15" width="90" height="25" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="25" y="22" width="70" height="4" rx="1" fill="#FF6B00" opacity="0.8"/>
+  <rect x="25" y="30" width="50" height="4" rx="1" fill="#64748b" opacity="0.5"/>
+  <!-- Grid Split (Video on left, Sidebar on right) -->
+  <!-- Video Mockup -->
+  <rect x="15" y="50" width="55" height="35" rx="4" fill="#0B1B3D"/>
+  <polygon points="40,62 40,72 48,67" fill="#ffffff"/>
+  <!-- Sidebar Card Mockup -->
+  <rect x="78" y="50" width="27" height="55" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="91" cy="62" r="6" fill="#00A8FF" opacity="0.2"/>
+  <rect x="83" y="74" width="16" height="3" rx="1" fill="#64748b" opacity="0.6"/>
+  <rect x="83" y="80" width="16" height="3" rx="1" fill="#64748b" opacity="0.6"/>
+  <rect x="83" y="90" width="16" height="8" rx="4" fill="#FF6B00"/>
+</svg>

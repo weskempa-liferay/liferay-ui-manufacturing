@@ -1,0 +1,14 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "rollWeekApiEndpoint",
+          "type": "text",
+          "label": "Roll Week API Endpoint",
+          "defaultValue": ""
+        }
+      ]
+    }
+  ]
+}

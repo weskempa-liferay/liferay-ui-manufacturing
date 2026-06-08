@@ -1,0 +1,14 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "documentsApiEndpoint",
+          "type": "text",
+          "label": "Documents API Endpoint",
+          "defaultValue": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+[#assign columnsClass = "companies-grid-4" /]
+[#if configuration.columnsCount?? && configuration.columnsCount == "2"]
+  [#assign columnsClass = "companies-grid-2" /]
+[/#if]
+
+[#assign themeClass = "companies-theme-dark" /]
+[#if configuration.cardTheme?? && configuration.cardTheme == "premium-light"]
+  [#assign themeClass = "companies-theme-light" /]
+[/#if]
+
+<section class="public-companies-section ${themeClass}">
+  <div class="companies-container">
+    <div class="companies-header-wrapper">
+      <h2 class="companies-supertitle" data-lfr-editable-id="companies-supertitle-text" data-lfr-editable-type="text">
+        GROWTH & INNOVATION
+      </h2>
+      <h1 class="companies-title" data-lfr-editable-id="companies-title-text" data-lfr-editable-type="text">
+        Our Family of Companies
+      </h1>
+      <p class="companies-subtitle" data-lfr-editable-id="companies-subtitle-text" data-lfr-editable-type="text">
+        We are a growth-oriented family of market-leading metals manufacturing businesses. Customer intimacy, employee engagement, and continuous improvement drive our competitive advantage.
+      </p>
+    </div>
+
+    <!-- Grid Container -->
+    <div class="companies-grid ${columnsClass}">
+      
+      <!-- Card 1: Charter Steel -->
+      <div class="company-card">
+        <div class="card-glow"></div>
+        <div class="card-image-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1574634534894-89d7576c8259?auto=format&fit=crop&w=600&q=80" alt="Charter Steel" />
+          <div class="card-image-overlay"></div>
+          <span class="company-tag">STEEL & BAR</span>
+        </div>
+        <div class="card-content">
+          <h3 class="company-name" data-lfr-editable-id="company-name-1" data-lfr-editable-type="text">
+            Charter Steel
+          </h3>
+          <p class="company-desc" data-lfr-editable-id="company-desc-1" data-lfr-editable-type="text">
+            A leading American supplier of carbon and alloy steel wire rod, bar, and wire products with state-of-the-art steelmaking facilities.
+          </p>
+          <div class="company-link-wrapper">
+            <a class="company-link-btn" data-lfr-editable-id="company-link-1" data-lfr-editable-type="link" href="https://www.chartersteel.com">
+              Visit Site
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Charter Wire -->
+      <div class="company-card">
+        <div class="card-glow"></div>
+        <div class="card-image-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=600&q=80" alt="Charter Wire" />
+          <div class="card-image-overlay"></div>
+          <span class="company-tag">ENGINEERED WIRE</span>
+        </div>
+        <div class="card-content">
+          <h3 class="company-name" data-lfr-editable-id="company-name-2" data-lfr-editable-type="text">
+            Charter Wire
+          </h3>
+          <p class="company-desc" data-lfr-editable-id="company-desc-2" data-lfr-editable-type="text">
+            Specializing in custom cold-rolled shaped wire, precision bars, and customized steel profiles for automotive, consumer, and industrial sectors.
+          </p>
+          <div class="company-link-wrapper">
+            <a class="company-link-btn" data-lfr-editable-id="company-link-2" data-lfr-editable-type="link" href="https://www.charterwire.com">
+              Visit Site
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Charter Casting -->
+      <div class="company-card">
+        <div class="card-glow"></div>
+        <div class="card-image-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80" alt="Charter Casting / Dura-Bar" />
+          <div class="card-image-overlay"></div>
+          <span class="company-tag">CAST IRON</span>
+        </div>
+        <div class="card-content">
+          <h3 class="company-name" data-lfr-editable-id="company-name-3" data-lfr-editable-type="text">
+            Charter Casting (Dura-Bar)
+          </h3>
+          <p class="company-desc" data-lfr-editable-id="company-desc-3" data-lfr-editable-type="text">
+            The world's leading manufacturer of continuous cast iron bar stock, Dura-Bar, offering unmatched machinability and metallurgy.
+          </p>
+          <div class="company-link-wrapper">
+            <a class="company-link-btn" data-lfr-editable-id="company-link-3" data-lfr-editable-type="link" href="http://www.charterdura-bar.com">
+              Visit Site
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Niles Iron & Metal -->
+      <div class="company-card">
+        <div class="card-glow"></div>
+        <div class="card-image-wrapper">
+          <img class="card-img" src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=600&q=80" alt="Niles Iron and Metal" />
+          <div class="card-image-overlay"></div>
+          <span class="company-tag">RECYCLING</span>
+        </div>
+        <div class="card-content">
+          <h3 class="company-name" data-lfr-editable-id="company-name-4" data-lfr-editable-type="text">
+            Niles Iron and Metal
+          </h3>
+          <p class="company-desc" data-lfr-editable-id="company-desc-4" data-lfr-editable-type="text">
+            Providing full-service recycling and processing of ferrous and non-ferrous scrap metals to feed green steel manufacturing.
+          </p>
+          <div class="company-link-wrapper">
+            <a class="company-link-btn" data-lfr-editable-id="company-link-4" data-lfr-editable-type="link" href="https://nilesiron.com/index.html">
+              Visit Site
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Action CTA -->
+    <div class="companies-action-wrapper">
+      <div class="companies-learn-more-btn">
+        <a class="learn-more-btn" data-lfr-editable-id="companies-action-cta" data-lfr-editable-type="link" href="/who/companies">
+          Learn More About Our Companies
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

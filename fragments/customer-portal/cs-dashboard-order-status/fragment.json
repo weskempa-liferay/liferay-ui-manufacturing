@@ -1,0 +1,9 @@
+{
+  "configurationPath": "configuration.json",
+  "cssPath": "index.css",
+  "htmlPath": "index.html",
+  "jsPath": "index.js",
+  "thumbnailPath": "thumbnail.svg",
+  "name": "Dashboard Order Status",
+  "type": "component"
+}

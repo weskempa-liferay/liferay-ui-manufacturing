@@ -1,0 +1,8 @@
+{
+    "cssPath": "styles.css",
+    "htmlPath": "index.html",
+    "jsPath": "main.js",
+    "configurationPath": "index.json",
+    "name": "CS Portal Navigation",
+    "type": "component"
+}

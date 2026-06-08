@@ -1,0 +1,33 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "showNewsletter",
+          "type": "checkbox",
+          "label": "Show Newsletter Subscription",
+          "defaultValue": true
+        },
+        {
+          "name": "footerTheme",
+          "type": "select",
+          "label": "Footer Accent Glow",
+          "defaultValue": "molten-orange",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "molten-orange",
+                "label": "Charter Amber Glow"
+              },
+              {
+                "value": "electric-blue",
+                "label": "Steel Blue Border Glow"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

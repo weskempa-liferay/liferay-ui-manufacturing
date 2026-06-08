@@ -1,0 +1,46 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "columnsCount",
+          "type": "select",
+          "label": "Columns on Desktop",
+          "defaultValue": "4",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "4",
+                "label": "4 Columns (Row)"
+              },
+              {
+                "value": "2",
+                "label": "2 Columns (Compact Grid)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "cardTheme",
+          "type": "select",
+          "label": "Card Visual Theme",
+          "defaultValue": "premium-dark",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "premium-dark",
+                "label": "Sleek Midnight Navy"
+              },
+              {
+                "value": "premium-light",
+                "label": "Elegant Minimal Light"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+    "fieldSets": [
+        {
+            "fields": [
+                {
+                    "name": "title",
+                    "type": "text",
+                    "label": "Navigation Title",
+                    "defaultValue": "Dashboard"
+                }
+            ]
+        }
+    ]
+}

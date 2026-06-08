@@ -1,0 +1,334 @@
+.public-locator-section {
+  padding: 5rem 8%;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+/* Theme states */
+.theme-dark {
+  background: #0B1B3D;
+  color: #ffffff;
+}
+
+.theme-light {
+  background: #ffffff;
+  color: #1a202c;
+}
+
+.locator-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Header styling */
+.locator-header-wrapper {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.locator-supertitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #FF6B00;
+  margin: 0;
+}
+
+.locator-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+.theme-light .locator-title {
+  color: #0B1B3D;
+}
+
+.locator-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.theme-light .locator-subtitle {
+  color: #4a5568;
+}
+
+/* UI Wrapper Grid */
+.locator-ui-wrapper {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.theme-light .locator-ui-wrapper {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar styling */
+.locator-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.theme-light .locator-sidebar {
+  background: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.locator-search-box {
+  position: relative;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.theme-light .locator-search-box {
+  border-bottom-color: #e2e8f0;
+}
+
+.locator-search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.theme-light .locator-search-input {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #1a202c;
+}
+
+.locator-search-input:focus {
+  border-color: #FF6B00;
+  box-shadow: 0 0 0 2px rgba(255, 107, 0, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 1.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.theme-light .search-icon {
+  color: #64748b;
+}
+
+.locator-list-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Custom Scrollbar for list */
+.locator-list-container::-webkit-scrollbar {
+  width: 6px;
+}
+.locator-list-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.locator-list-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+.theme-light .locator-list-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
+.distributor-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.distributor-item {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-light .distributor-item {
+  border-bottom-color: #f1f5f9;
+}
+
+.distributor-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.theme-light .distributor-item:hover {
+  background: #f8fafc;
+}
+
+.distributor-item.active {
+  background: rgba(255, 107, 0, 0.1);
+  border-left: 4px solid #FF6B00;
+}
+.theme-light .distributor-item.active {
+  background: rgba(255, 107, 0, 0.05);
+}
+
+.dist-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+  color: #ffffff;
+}
+.theme-light .dist-name {
+  color: #0B1B3D;
+}
+.distributor-item.active .dist-name {
+  color: #FF6B00;
+}
+
+.dist-address, .dist-phone {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0 0 0.15rem 0;
+  line-height: 1.4;
+}
+.theme-light .dist-address, .theme-light .dist-phone {
+  color: #64748b;
+}
+
+/* Loading & Empty States */
+.locator-loading-state, .locator-empty-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+.theme-light .locator-loading-state, .theme-light .locator-empty-state {
+  color: #94a3b8;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 107, 0, 0.2);
+  border-top-color: #FF6B00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+/* Map Container styling */
+.locator-map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  z-index: 1; /* Keep leaflet controls below Liferay panels if needed */
+}
+
+.theme-light .locator-map-container {
+  border-color: #e2e8f0;
+}
+
+/* Leaflet Customizations for Premium Feel */
+.leaflet-container {
+  font-family: 'Inter', sans-serif;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #ffffff;
+  color: #1a202c;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+  padding: 0;
+}
+
+.leaflet-popup-content {
+  margin: 1rem 1.25rem;
+  line-height: 1.5;
+}
+
+.leaflet-popup-tip {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.popup-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #0B1B3D;
+  margin: 0 0 0.5rem 0;
+}
+
+.popup-detail {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0 0 0.2rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .locator-ui-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 500px; /* Stack on tablet/mobile */
+  }
+  .locator-sidebar, .locator-map-container {
+    height: 100% !important; /* Override inline heights */
+  }
+}
+
+@media (max-width: 768px) {
+  .public-locator-section {
+    padding: 4rem 5%;
+  }
+  .locator-title {
+    font-size: 2.25rem;
+  }
+  .locator-ui-wrapper {
+    padding: 1rem;
+    grid-template-rows: 350px 450px;
+  }
+}

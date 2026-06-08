@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100" height="100">
+  <rect width="120" height="120" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2"/>
+  
+  <!-- Sidebar Mockup -->
+  <rect x="10" y="10" width="35" height="100" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <rect x="15" y="15" width="25" height="8" rx="2" fill="#e2e8f0"/>
+  <rect x="15" y="30" width="25" height="20" rx="2" fill="#FF6B00" opacity="0.1"/>
+  <rect x="18" y="35" width="15" height="3" rx="1.5" fill="#FF6B00"/>
+  <rect x="18" y="42" width="10" height="2" rx="1" fill="#FF6B00" opacity="0.5"/>
+  
+  <rect x="15" y="55" width="25" height="20" rx="2" fill="#f8fafc"/>
+  <rect x="18" y="60" width="15" height="3" rx="1.5" fill="#64748b"/>
+  <rect x="18" y="67" width="10" height="2" rx="1" fill="#94a3b8"/>
+  
+  <rect x="15" y="80" width="25" height="20" rx="2" fill="#f8fafc"/>
+  <rect x="18" y="85" width="15" height="3" rx="1.5" fill="#64748b"/>
+  <rect x="18" y="92" width="10" height="2" rx="1" fill="#94a3b8"/>
+
+  <!-- Map Mockup -->
+  <rect x="50" y="10" width="60" height="100" rx="4" fill="#e2e8f0"/>
+  <path d="M50 30 L80 10 L110 30 L110 80 L80 100 L50 80 Z" fill="#cbd5e1" opacity="0.5"/>
+  
+  <!-- Map Pins -->
+  <circle cx="70" cy="50" r="4" fill="#FF6B00"/>
+  <path d="M70 50 L68 45 L72 45 Z" fill="#FF6B00"/>
+  
+  <circle cx="90" cy="70" r="4" fill="#FF6B00"/>
+  <path d="M90 70 L88 65 L92 65 Z" fill="#FF6B00"/>
+  
+  <circle cx="85" cy="35" r="4" fill="#0B1B3D"/>
+  <path d="M85 35 L83 30 L87 30 Z" fill="#0B1B3D"/>
+</svg>

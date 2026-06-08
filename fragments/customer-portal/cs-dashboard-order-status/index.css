@@ -1,0 +1,163 @@
+.cs-dash-orders {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.orders-header {
+  padding: 1.5rem 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.orders-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orders-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0B1B3D;
+  margin: 0;
+}
+
+.orders-view-all {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #FF6B00;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.orders-view-all:hover {
+  color: #cc5500;
+}
+
+/* Filter tabs */
+.orders-filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-tab {
+  padding: 0.4rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-tab:hover {
+  border-color: #cbd5e1;
+  color: #0B1B3D;
+}
+
+.filter-tab.active {
+  background: #0B1B3D;
+  color: #ffffff;
+  border-color: #0B1B3D;
+}
+
+/* Table */
+.orders-table-wrapper {
+  overflow-x: auto;
+  padding: 0.5rem 0 0;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.orders-table thead th {
+  padding: 0.75rem 1.75rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  text-align: left;
+  border-bottom: 1px solid #f1f5f9;
+  white-space: nowrap;
+}
+
+.orders-table tbody tr {
+  transition: background 0.15s ease;
+  cursor: pointer;
+}
+
+.orders-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.orders-table tbody td {
+  padding: 0.9rem 1.75rem;
+  font-size: 0.875rem;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  white-space: nowrap;
+}
+
+.cell-order {
+  font-weight: 700;
+  color: #0B1B3D;
+}
+
+/* Status pills */
+.status-pill {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-scheduled {
+  background: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+}
+
+.status-production {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+.status-shipped {
+  background: rgba(11, 27, 61, 0.08);
+  color: #0B1B3D;
+}
+
+.status-invoiced {
+  background: rgba(100, 116, 139, 0.1);
+  color: #64748b;
+}
+
+.status-late {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .orders-header {
+    padding: 1.25rem 1.25rem 0;
+  }
+  .orders-table tbody td,
+  .orders-table thead th {
+    padding: 0.75rem 1.25rem;
+  }
+}

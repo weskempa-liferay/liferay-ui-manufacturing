@@ -1,0 +1,145 @@
+.cs-dash-docs {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.docs-header {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.docs-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0B1B3D;
+  margin: 0;
+}
+
+.docs-view-all {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #FF6B00;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.docs-view-all:hover {
+  color: #cc5500;
+}
+
+/* Document list */
+.docs-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.doc-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.75rem;
+  border-bottom: 1px solid #f1f5f9;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.doc-item:last-child {
+  border-bottom: none;
+}
+
+.doc-item:hover {
+  background: #f8fafc;
+}
+
+/* Document icon */
+.doc-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doc-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.doc-icon-bol {
+  background: rgba(11, 27, 61, 0.07);
+  color: #0B1B3D;
+}
+.doc-icon-cert {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+.doc-icon-invoice {
+  background: rgba(255, 107, 0, 0.1);
+  color: #FF6B00;
+}
+.doc-icon-ack {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}
+
+/* Doc info */
+.doc-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.doc-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #0B1B3D;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.doc-meta {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+/* Type badge */
+.doc-type-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.doc-type-bol {
+  background: rgba(11, 27, 61, 0.07);
+  color: #0B1B3D;
+}
+.doc-type-cert {
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+.doc-type-inv {
+  background: rgba(255, 107, 0, 0.1);
+  color: #FF6B00;
+}
+.doc-type-ack {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+}

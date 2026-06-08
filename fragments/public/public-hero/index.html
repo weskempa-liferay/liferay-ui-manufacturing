@@ -1,0 +1,64 @@
+[#assign alignmentClass = "hero-align-left" /]
+[#if configuration.alignment?? && configuration.alignment == "center"]
+  [#assign alignmentClass = "hero-align-center" /]
+[/#if]
+
+[#assign overlayClass = "hero-overlay-navy" /]
+[#if configuration.overlayStyle?? && configuration.overlayStyle == "steel-glow"]
+  [#assign overlayClass = "hero-overlay-steel" /]
+[/#if]
+
+<div class="public-hero-container ${alignmentClass} ${overlayClass}">
+  <div class="hero-bg-wrapper">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80');"></div>
+  </div>
+
+  <div class="hero-content-wrapper">
+    <div class="hero-card">
+      <div class="hero-tagline-container">
+        <span class="hero-accent-line"></span>
+        <span class="hero-tag" data-lfr-editable-id="hero-tag-text" data-lfr-editable-type="text">
+          ESTABLISHED IN 1936
+        </span>
+      </div>
+
+      <h1 class="hero-title" data-lfr-editable-id="hero-title-text" data-lfr-editable-type="text">
+        One Family. One Team.<br>Shaping the Future of Steel.
+      </h1>
+
+      <p class="hero-subtitle" data-lfr-editable-id="hero-subtitle-text" data-lfr-editable-type="text">
+        We are a growth-oriented, family-owned holding company of market-leading metals manufacturing businesses, driven by customer intimacy, employee engagement, and continuous improvement.
+      </p>
+
+      <div class="hero-actions">
+        <div class="hero-btn-primary">
+          <a class="hero-action-link primary-btn" data-lfr-editable-id="hero-cta-primary" data-lfr-editable-type="link" href="/work/jobs">
+            Explore Careers
+          </a>
+        </div>
+        <div class="hero-btn-secondary">
+          <a class="hero-action-link secondary-btn" data-lfr-editable-id="hero-cta-secondary" data-lfr-editable-type="link" href="/who/companies">
+            Our Companies
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Stats Grid (Subtle Glassmorphic Badges) -->
+    <div class="hero-quick-stats">
+      <div class="stat-badge">
+        <div class="stat-num" data-lfr-editable-id="stat-num-1" data-lfr-editable-type="text">4</div>
+        <div class="stat-label" data-lfr-editable-id="stat-label-1" data-lfr-editable-type="text">Market Leaders</div>
+      </div>
+      <div class="stat-badge">
+        <div class="stat-num" data-lfr-editable-id="stat-num-2" data-lfr-editable-type="text">One</div>
+        <div class="stat-label" data-lfr-editable-id="stat-label-2" data-lfr-editable-type="text">Family, One Team</div>
+      </div>
+      <div class="stat-badge">
+        <div class="stat-num" data-lfr-editable-id="stat-num-3" data-lfr-editable-type="text">100%</div>
+        <div class="stat-label" data-lfr-editable-id="stat-label-3" data-lfr-editable-type="text">Quality Driven</div>
+      </div>
+    </div>
+  </div>
+</div>

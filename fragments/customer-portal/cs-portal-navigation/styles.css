@@ -1,0 +1,342 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+.fragment-left-navigation {
+    width: 280px;
+    background-color: #ffffff;
+    padding: 0; /* Remove top/bottom padding to sit nicely with header/footer */
+    border-right: 1px solid #e1e4e8;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden; /* Prevent body scroll, use wrapper scroll */
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.fragment-left-navigation.collapsed {
+    width: 64px;
+}
+
+/* Base List Resets */
+.fragment-left-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Section Titles */
+.fragment-left-navigation .nav-section-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: #5f6368;
+    letter-spacing: 0.8px;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    padding: 0 24px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: opacity 0.2s, padding 0.3s;
+}
+
+.fragment-left-navigation.collapsed .nav-section-title {
+    opacity: 0;
+    padding: 0;
+    height: 1px;
+    margin: 12px 0;
+    background: #e1e4e8;
+}
+
+/* Main Navigation Items */
+.fragment-left-navigation .nav-item {
+    margin-bottom: 2px;
+}
+
+.fragment-left-navigation .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 2px 16px;
+    margin: 4px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #5f6368;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.fragment-left-navigation .nav-link:hover {
+    background-color: #f8f9fa;
+    color: #202124;
+}
+
+.fragment-left-navigation .nav-link:hover .nav-icon {
+    color: #202124;
+}
+
+.fragment-left-navigation .nav-icon {
+    font-size: 18px;
+    color: #5f6368;
+    margin-right: 16px;
+    width: 20px;
+    text-align: center;
+    transition: color 0.2s;
+}
+
+.fragment-left-navigation .nav-text {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: opacity 0.2s;
+}
+
+.fragment-left-navigation.collapsed .nav-text {
+    opacity: 0;
+    width: 0;
+    display: none;
+}
+
+.fragment-left-navigation .nav-chevron {
+    font-size: 14px;
+    color: #5f6368;
+    transition: transform 0.3s ease, opacity 0.2s;
+}
+
+.fragment-left-navigation.collapsed .nav-chevron {
+    opacity: 0;
+    width: 0;
+    display: none;
+}
+
+.fragment-left-navigation.collapsed .nav-icon {
+    margin-right: 0;
+    font-size: 20px;
+}
+
+.fragment-left-navigation.collapsed .nav-link {
+    justify-content: center;
+    padding: 12px 0;
+    margin: 4px 8px;
+}
+
+/* Submenu Styles */
+.fragment-left-navigation .has-submenu .nav-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.fragment-left-navigation .has-submenu.expanded .nav-submenu {
+    max-height: 800px;
+}
+
+.fragment-left-navigation.collapsed .nav-submenu {
+    display: none !important;
+}
+
+.fragment-left-navigation .has-submenu.expanded .nav-chevron {
+    transform: rotate(180deg);
+}
+
+.fragment-left-navigation .has-submenu.expanded>.nav-link {
+    color: #202124;
+}
+
+.fragment-left-navigation .has-submenu.expanded>.nav-link .nav-icon {
+    color: #202124;
+}
+
+.fragment-left-navigation .submenu-item {
+    margin-bottom: 2px;
+}
+
+.fragment-left-navigation .submenu-link {
+    display: block;
+    padding: 10px 16px 10px 52px;
+    margin: 2px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #5f6368;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.fragment-left-navigation .submenu-link:hover {
+    color: #202124;
+    background-color: #f8f9fa;
+}
+
+/* Active States */
+.fragment-left-navigation .nav-item.active-group>.nav-link {
+    color: #202124;
+    font-weight: 500;
+}
+
+.fragment-left-navigation .nav-item.active-group>.nav-link .nav-icon {
+    color: #202124;
+}
+
+.fragment-left-navigation .submenu-item.active .submenu-link {
+    color: #000000;
+    font-weight: 500;
+    background-color: #f4f5f7;
+}
+
+/* Standalone active link, if needed */
+.fragment-left-navigation .nav-link.active {
+    background-color: #f4f5f7;
+    color: #000000;
+    font-weight: 500;
+}
+
+.fragment-left-navigation .nav-link.active .nav-icon {
+    color: #000000;
+}
+
+/* Scoped Brand Header & Footer */
+.fragment-left-navigation .nav-brand {
+    display: flex;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #f1f3f4;
+    background-color: #ffffff;
+}
+
+.fragment-left-navigation .nav-brand-icon {
+    font-size: 22px;
+    color: #1a73e8;
+    margin-right: 12px;
+}
+
+.fragment-left-navigation .nav-brand-text {
+    font-weight: 600;
+    font-size: 16px;
+    color: #202124;
+    letter-spacing: 0.2px;
+}
+
+.fragment-left-navigation.collapsed .nav-brand {
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.fragment-left-navigation.collapsed .nav-brand-text {
+    display: none;
+}
+
+.fragment-left-navigation .nav-menu-wrapper {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 16px 0;
+}
+
+/* Custom Webkit Scrollbars for Premium Look */
+.fragment-left-navigation .nav-menu-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.fragment-left-navigation .nav-menu-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.fragment-left-navigation .nav-menu-wrapper::-webkit-scrollbar-thumb {
+    background: #e1e4e8;
+    border-radius: 4px;
+}
+
+.fragment-left-navigation .nav-menu-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #bdc1c6;
+}
+
+.fragment-left-navigation .nav-footer {
+    padding: 20px 24px;
+    border-top: 1px solid #f1f3f4;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ffffff;
+}
+
+.fragment-left-navigation.collapsed .nav-footer {
+    display: none;
+}
+
+.fragment-left-navigation .nav-footer-link {
+    font-size: 12px;
+    font-weight: 500;
+    color: #5f6368;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.fragment-left-navigation .nav-footer-link:hover {
+    color: #1a73e8;
+}
+
+/* Submenu Sections & Highlights */
+.fragment-left-navigation .submenu-section-title {
+    font-size: 10px;
+    font-weight: 700;
+    color: #80868b;
+    letter-spacing: 0.8px;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    padding: 6px 16px 6px 52px;
+    text-transform: uppercase;
+}
+
+/* Price Sheets: Gray Dashed Border Highlight */
+.fragment-left-navigation .dashed-item {
+    border: 1.5px dashed #bdc1c6;
+    border-radius: 6px;
+    margin: 4px 24px 4px 52px;
+    transition: border-color 0.2s;
+}
+
+.fragment-left-navigation .dashed-item:hover {
+    border-color: #5f6368;
+}
+
+.fragment-left-navigation .dashed-item .submenu-link {
+    margin: 0 !important;
+    padding: 8px 12px !important;
+}
+
+/* Roll Schedule: Solid Orange Border Highlight */
+.fragment-left-navigation .orange-solid-item {
+    border: 1.5px solid #f48024;
+    border-radius: 6px;
+    margin: 4px 24px 4px 52px;
+    background-color: rgba(244, 128, 36, 0.03);
+    transition: background-color 0.2s;
+}
+
+.fragment-left-navigation .orange-solid-item:hover {
+    background-color: rgba(244, 128, 36, 0.06);
+}
+
+.fragment-left-navigation .orange-solid-item .submenu-link {
+    margin: 0 !important;
+    padding: 8px 12px !important;
+    color: #f48024 !important;
+    font-weight: 600;
+}
+
+/* MIP Forecast: Dashed Orange Border Highlight */
+.fragment-left-navigation .orange-dashed-item {
+    border: 1.5px dashed #f48024;
+    border-radius: 6px;
+    margin: 4px 24px 4px 52px;
+    background-color: rgba(244, 128, 36, 0.01);
+    transition: background-color 0.2s;
+}
+
+.fragment-left-navigation .orange-dashed-item:hover {
+    background-color: rgba(244, 128, 36, 0.04);
+}
+
+.fragment-left-navigation .orange-dashed-item .submenu-link {
+    margin: 0 !important;
+    padding: 8px 12px !important;
+    color: #f48024 !important;
+    font-weight: 600;
+}

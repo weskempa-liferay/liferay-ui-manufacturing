@@ -1,0 +1,56 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "apiEndpoint",
+          "type": "text",
+          "label": "API Endpoint URL",
+          "defaultValue": "https://webserver-lctresmeddemo-prd.lfr.cloud/o/c/distributors/"
+        },
+        {
+          "name": "mapHeight",
+          "type": "select",
+          "label": "Map Height",
+          "defaultValue": "600px",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "400px",
+                "label": "Small (400px)"
+              },
+              {
+                "value": "600px",
+                "label": "Medium (600px)"
+              },
+              {
+                "value": "800px",
+                "label": "Large (800px)"
+              }
+            ]
+          }
+        },
+        {
+          "name": "themeType",
+          "type": "select",
+          "label": "Component Theme",
+          "defaultValue": "theme-light",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "theme-light",
+                "label": "Clean Light"
+              },
+              {
+                "value": "theme-dark",
+                "label": "Corporate Dark Navy"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

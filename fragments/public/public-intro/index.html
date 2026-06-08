@@ -1,0 +1,82 @@
+[#assign backgroundClass = "intro-bg-light" /]
+[#if configuration.themeType?? && configuration.themeType == "dark-industrial"]
+  [#assign backgroundClass = "intro-bg-dark" /]
+[/#if]
+
+[#assign sidebarClass = "" /]
+[#if !configuration.showSidebar?? || !configuration.showSidebar]
+  [#assign sidebarClass = "intro-full-width" /]
+[/#if]
+
+<section class="public-intro-section ${backgroundClass} ${sidebarClass}">
+  <div class="intro-container">
+    <div class="intro-header-wrapper">
+      <h2 class="intro-supertitle" data-lfr-editable-id="intro-supertitle-text" data-lfr-editable-type="text">
+        WHO WE ARE
+      </h2>
+      <h1 class="intro-title" data-lfr-editable-id="intro-title-text" data-lfr-editable-type="text">
+        Charter Manufacturing
+      </h1>
+      
+      <div class="intro-quote-card">
+        <span class="quote-icon">“</span>
+        <blockquote class="intro-quote" data-lfr-editable-id="intro-quote-text" data-lfr-editable-type="text">
+          Charter’s culture is our strongest competitive advantage. Trust and empowerment define our culture and create an environment that engages our employees, driving us to strive to do it better. Together, we are One Family. One Team.
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="intro-grid">
+      <!-- Video Column -->
+      <div class="intro-col-video">
+        <div class="video-card-frame">
+          <div class="video-card-header">
+            <span class="browser-dot dot-red"></span>
+            <span class="browser-dot dot-yellow"></span>
+            <span class="browser-dot dot-green"></span>
+            <span class="browser-title">One Family. One Team.</span>
+          </div>
+          <div class="video-ratio-wrapper">
+            <iframe 
+              src="https://player.vimeo.com/video/768982262?color=FF6B00&title=0&byline=0&portrait=0" 
+              frameborder="0" 
+              allow="autoplay; fullscreen; picture-in-picture" 
+              allowfullscreen 
+              title="Charter Manufacturing Culture Video">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Careers / Culture Sidebar -->
+      [#if configuration.showSidebar?? && configuration.showSidebar]
+      <div class="intro-col-sidebar">
+        <div class="culture-sidebar-card">
+          <!-- Premium Non-editable SVG Badge representing family, teamwork, growth -->
+          <div class="culture-badge-wrapper">
+            <div class="culture-badge-bg"></div>
+            <svg class="culture-badge-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+              <path d="M32 4C16.5 4 4 16.5 4 32s12.5 28 28 28 28-12.5 28-28S47.5 4 32 4zm0 8c3.9 0 7 3.1 7 7s-3.1 7-7 7-7-3.1-7-7 3.1-7 7-7zm-12 36c0-6.6 5.4-12 12-12s12 5.4 12 12H20z" fill="#FF6B00"/>
+              <path d="M42 22c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5zm-2 18c0-4.4 3.6-8 8-8s8 3.6 8 8H40z" fill="#00A8FF" opacity="0.8"/>
+            </svg>
+          </div>
+
+          <h3 class="culture-card-title" data-lfr-editable-id="culture-title-text" data-lfr-editable-type="text">
+            Join the Charter family and grow with us.
+          </h3>
+          
+          <p class="culture-card-desc" data-lfr-editable-id="culture-desc-text" data-lfr-editable-type="text">
+            Trust and empowerment define our culture and create an environment that engages our employees, driving us to strive to do it better.
+          </p>
+
+          <div class="culture-card-action">
+            <a class="culture-apply-btn" data-lfr-editable-id="culture-apply-link" data-lfr-editable-type="link" href="https://chartermfg.wd5.myworkdayjobs.com/Charter_Careers">
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </div>
+      [/#if]
+    </div>
+  </div>
+</section>

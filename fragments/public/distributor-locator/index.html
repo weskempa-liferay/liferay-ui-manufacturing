@@ -1,0 +1,59 @@
+[#assign themeClass = "theme-light" /]
+[#if configuration.themeType?? && configuration.themeType == "theme-dark"]
+  [#assign themeClass = "theme-dark" /]
+[/#if]
+
+[#assign mapHeight = "600px" /]
+[#if configuration.mapHeight??]
+  [#assign mapHeight = configuration.mapHeight /]
+[/#if]
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+<section class="public-locator-section ${themeClass}">
+  <div class="locator-container">
+    <div class="locator-header-wrapper">
+      <h2 class="locator-supertitle" data-lfr-editable-id="locator-supertitle-text" data-lfr-editable-type="text">
+        FIND A PARTNER
+      </h2>
+      <h1 class="locator-title" data-lfr-editable-id="locator-title-text" data-lfr-editable-type="text">
+        Distributor Locator
+      </h1>
+      <p class="locator-subtitle" data-lfr-editable-id="locator-subtitle-text" data-lfr-editable-type="text">
+        Locate our trusted distributors and partners across the globe to find the products and services you need.
+      </p>
+    </div>
+
+    <div class="locator-ui-wrapper">
+      
+      <!-- Left Sidebar: List -->
+      <div class="locator-sidebar" style="height: ${mapHeight}">
+        <div class="locator-search-box">
+          <input type="text" class="locator-search-input" placeholder="Search by name, city, or state..." aria-label="Search distributors" />
+          <svg class="search-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="currentColor"/>
+          </svg>
+        </div>
+        
+        <div class="locator-list-container">
+          <div class="locator-loading-state">
+            <div class="spinner"></div>
+            <p>Loading distributors...</p>
+          </div>
+          <!-- List items will be injected here by JS -->
+          <ul class="distributor-list"></ul>
+          
+          <div class="locator-empty-state" style="display: none;">
+            <p>No distributors found matching your search.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Area: Map -->
+      <div class="locator-map-container" style="height: ${mapHeight}">
+        <div class="distributor-map-mount" style="height: 100%; width: 100%;"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
