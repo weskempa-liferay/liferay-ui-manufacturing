@@ -193,3 +193,26 @@
   color: #ffffff;
   border-color: #2b8a3e;
 }
+
+/* Loading Spinner */
+.rs-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.rs-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #e9ecef;
+  border-top: 3px solid #EF4A24;
+  border-radius: 50%;
+  animation: rs-spin 1s linear infinite;
+}
+
+@keyframes rs-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

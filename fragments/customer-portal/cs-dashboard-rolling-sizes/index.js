@@ -1,41 +1,4 @@
 if (fragmentElement) {
-  // Mock Data generation based on spreadsheet
-  const generateMockData = () => {
-    const data = [];
-    let currentDate = new Date(2026, 4, 31); // May 31, 2026
-
-    const sampleSizes = ["17/32", "45/64", "33/64", "9/16", "27/64", "29/64", "21/64", "23/64", "19/64", "7/32", "15/64", "5.5MM", "14.5MM", "1/4", "11/16", "37/64", "6.5MM", "35/64", "15/32", "7/16", "3/8", "8.5MM", "3/4", "11/32", "39/64", "9/32", "31/64", "25/32", "5/8", "16MM", "5/16", "12.5MM", "51/64", "1/2", "41/64", "13/32", "13/16", "47/64", "21/32", "19/32", "53/64", "49/64", "27/32", "31/32", "43/64", "63/64", "55/64", "1", "7/8", "25.6MM", "57/64", "1-1/64", "29/32", "1-1/32", "59/64", "1-3/64", "15/16", "1-1/16", "61/64", "1-5/64", "1-15/64", "1-11/32", "1-3/32", "1-1/4", "1-23/64", "1-7/64", "1-17/64", "1-3/8", "1-1/8", "1-9/32", "1-19/64", "1-5/16", "1-21/64", "1-5/32", "1-11/64", "1-3/16", "1-13/64", "1-7/32"];
-
-    for (let i = 0; i < 16; i++) {
-      // Format date like "5/31/2026"
-      const dateStr = `${currentDate.getMonth() + 1}/${currentDate.getDate()}/${currentDate.getFullYear()}`;
-      
-      // Week 5 (7/5/2026) is shutdown
-      const inOp = i !== 5;
-      
-      // Select a random subset of sizes if in operation
-      let sizes = [];
-      if (inOp) {
-        const numSizes = Math.floor(Math.random() * 20) + 15; // 15 to 35 sizes
-        // Shuffle and slice
-        sizes = [...sampleSizes].sort(() => 0.5 - Math.random()).slice(0, numSizes);
-        // Sort sizes alphabetically for display
-        sizes.sort();
-      }
-
-      data.push({
-        date: dateStr,
-        inOperation: inOp,
-        sizes: sizes
-      });
-
-      // Add 7 days
-      currentDate.setDate(currentDate.getDate() + 7);
-    }
-    return data;
-  };
-
-  const timelineData = generateMockData();
   const container = fragmentElement.querySelector('#rs-timeline-container');
   const detailPanel = fragmentElement.querySelector('#rs-detail-panel');
   const detailTitle = fragmentElement.querySelector('#rs-detail-title');
@@ -45,9 +8,22 @@ if (fragmentElement) {
 
   let activeWeekIndex = -1;
   let currentFilter = '';
+  let timelineData = [];
+
+  const formatDate = (isoString) => {
+    const date = new Date(isoString);
+    date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+    return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+  };
 
   const renderTimeline = () => {
     container.innerHTML = '';
+    
+    if (timelineData.length === 0) {
+      container.innerHTML = '<div style="padding: 1rem; width: 100%; text-align: center; color: #6c757d;">No scheduling data found.</div>';
+      return;
+    }
+
     timelineData.forEach((week, index) => {
       const card = document.createElement('div');
       card.className = `rs-week-card ${week.inOperation ? '' : 'disabled'} ${index === activeWeekIndex ? 'active' : ''}`;
@@ -80,12 +56,16 @@ if (fragmentElement) {
     detailTitle.textContent = `Scheduled Sizes for Week of ${week.date}`;
     detailContent.innerHTML = '';
 
-    week.sizes.forEach(size => {
-      const pill = document.createElement('div');
-      pill.className = 'rs-size-pill';
-      pill.textContent = size;
-      detailContent.appendChild(pill);
-    });
+    if (week.sizes.length === 0) {
+      detailContent.innerHTML = '<div style="grid-column: 1 / -1; color: #6c757d; font-size: 0.875rem;">No sizes scheduled for this week.</div>';
+    } else {
+      week.sizes.forEach(size => {
+        const pill = document.createElement('div');
+        pill.className = 'rs-size-pill';
+        pill.textContent = size;
+        detailContent.appendChild(pill);
+      });
+    }
 
     detailPanel.style.display = 'block';
     applyFilterHighlight();
@@ -108,6 +88,64 @@ if (fragmentElement) {
         const isMatch = term && pill.textContent.toLowerCase().includes(term);
         pill.classList.toggle('match', !!isMatch);
       });
+    }
+  };
+
+  const fetchMatrixData = async () => {
+    try {
+      const headers = { 'Content-Type': 'application/json' };
+      if (window.Liferay && Liferay.authToken) {
+        headers['x-csrf-token'] = Liferay.authToken;
+      }
+
+      // We request nestedFields=rollWeekToScheduledSizes (Liferay's standard naming convention for relationships)
+      // or similar if the exact relationship name differs.
+      // We will also use pageSize=50 to grab a large chunk of weeks.
+      const url = '/o/c/rollweeks/?sort=weekStartDate:asc&pageSize=50&nestedFields=rollWeekToScheduledSizes,rollWeekToScheduledSize';
+      const response = await fetch(url, { headers });
+      
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      
+      const json = await response.json();
+      
+      // Filter by facility scope if configured
+      const targetFacility = configuration.facilityScope || 'SKV';
+      let filteredData = json.items;
+      
+      if (targetFacility !== 'ALL') {
+        filteredData = json.items.filter(item => {
+          const facValue = item.facilityCode?.key || item.facilityCode?.name || item.facilityCode;
+          return typeof facValue === 'string' && facValue.toUpperCase() === targetFacility.toUpperCase();
+        });
+      }
+
+      // Map to frontend timelineData format
+      timelineData = filteredData.map(item => {
+        // Handle possible relationship array names
+        const nestedSizesArray = item.rollWeekToScheduledSizes || item.rollWeekToScheduledSize || [];
+        
+        // Sort sizes by sequenceOrder if available, otherwise alphabetical
+        nestedSizesArray.sort((a, b) => {
+          if (a.sequenceOrder && b.sequenceOrder) return a.sequenceOrder - b.sequenceOrder;
+          return a.sizeValue.localeCompare(b.sizeValue);
+        });
+
+        const sizes = nestedSizesArray.map(sz => sz.sizeValue);
+
+        return {
+          date: formatDate(item.weekStartDate),
+          inOperation: item.millInOperation,
+          sizes: sizes
+        };
+      });
+
+      renderTimeline();
+
+    } catch (error) {
+      console.error('Error fetching rolling sizes matrix data:', error);
+      if (container) {
+        container.innerHTML = '<div style="padding: 1rem; width: 100%; text-align: center; color: #e03131;">Error loading scheduling data.</div>';
+      }
     }
   };
 
@@ -136,8 +174,6 @@ if (fragmentElement) {
     });
   }
 
-  // Initial render
-  if (container) {
-    renderTimeline();
-  }
+  // Initial render / fetch
+  fetchMatrixData();
 }

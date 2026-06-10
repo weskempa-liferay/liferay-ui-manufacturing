@@ -1,0 +1,30 @@
+[
+  {
+    "externalReferenceCode": "RW-SKV-2026-05-31",
+    "facilityCode": "SKV",
+    "weekStartDate": "2026-05-31T00:00:00Z",
+    "millInOperation": true,
+    "capacityPercentage": 100
+  },
+  {
+    "externalReferenceCode": "RW-SKV-2026-06-07",
+    "facilityCode": "SKV",
+    "weekStartDate": "2026-06-07T00:00:00Z",
+    "millInOperation": true,
+    "capacityPercentage": 95
+  },
+  {
+    "externalReferenceCode": "RW-SKV-2026-06-14",
+    "facilityCode": "SKV",
+    "weekStartDate": "2026-06-14T00:00:00Z",
+    "millInOperation": false,
+    "capacityPercentage": 100
+  },
+  {
+    "externalReferenceCode": "RW-CLE-2026-05-31",
+    "facilityCode": "CLE",
+    "weekStartDate": "2026-05-31T00:00:00Z",
+    "millInOperation": true,
+    "capacityPercentage": 85
+  }
+]

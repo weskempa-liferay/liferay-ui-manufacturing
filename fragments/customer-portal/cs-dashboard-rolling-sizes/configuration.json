@@ -6,11 +6,22 @@
           "name": "facilityScope",
           "type": "select",
           "label": "Facility Scope",
-          "options": [
-            { "value": "SKV", "label": "Saukville (SKV)" },
-            { "value": "CLE", "label": "Cleveland (CLE)" },
-            { "value": "ALL", "label": "Both Facilities" }
-          ],
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "SKV",
+                "label": "Saukville (SKV)"
+              },
+              {
+                "value": "CLE",
+                "label": "Cleveland (CLE)"
+              },
+              {
+                "value": "ALL",
+                "label": "Both Facilities"
+              }
+            ]
+          },
           "defaultValue": "SKV"
         }
       ]

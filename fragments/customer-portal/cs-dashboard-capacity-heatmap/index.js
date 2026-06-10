@@ -1,24 +1,8 @@
 if (fragmentElement) {
-  // Mock Data generation matching the spreadsheet dates and legend logic
-  const mockHeatmapData = [
-    { date: "5/31/26", capacity: 100 }, // Closed
-    { date: "6/7/26",  capacity: 100 }, // Closed
-    { date: "6/14/26", capacity: 95 },  // Urgent (85-99.9)
-    { date: "6/21/26", capacity: 80 },  // OK (70-84.9)
-    { date: "6/28/26", capacity: 75 },  // OK (70-84.9)
-    { date: "7/5/26",  capacity: 100 }, // Closed (holiday/shutdown)
-    { date: "7/12/26", capacity: 72 },  // OK (70-84.9)
-    { date: "7/19/26", capacity: 65 },  // Open (< 70)
-    { date: "7/26/26", capacity: 60 },  // Open
-    { date: "8/2/26",  capacity: 55 },  // Open
-    { date: "8/9/26",  capacity: 40 },  // Open
-    { date: "8/16/26", capacity: 68 },  // Open
-    { date: "8/23/26", capacity: 50 },  // Open
-    { date: "8/30/26", capacity: 62 },  // Open
-    { date: "9/6/26",  capacity: 69 },  // Open
-    { date: "9/13/26", capacity: 50 },  // Open
-    { date: "9/20/26", capacity: 45 }   // Open
-  ];
+  const gridBody = fragmentElement.querySelector('#hm-grid-body');
+  const tooltip = fragmentElement.querySelector('#hm-tooltip');
+  const legend = fragmentElement.querySelector('#hm-legend');
+  const targetFacility = configuration.facilityName || 'Saukville';
 
   const getTier = (capacity) => {
     if (capacity >= 100) return 'closed';
@@ -27,48 +11,90 @@ if (fragmentElement) {
     return 'open';
   };
 
-  const gridBody = fragmentElement.querySelector('#hm-grid-body');
-  const tooltip = fragmentElement.querySelector('#hm-tooltip');
-  const legend = fragmentElement.querySelector('#hm-legend');
+  const formatDate = (isoString) => {
+    const date = new Date(isoString);
+    // Add timezone offset to prevent off-by-one day issues
+    date.setMinutes(date.getMinutes() + date.getTimezoneOffset());
+    return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear().toString().substr(-2)}`;
+  };
 
-  // Render Grid
-  if (gridBody) {
+  const renderGrid = (data) => {
     gridBody.innerHTML = '';
-    mockHeatmapData.forEach(item => {
-      const tier = getTier(item.capacity);
+    
+    if (data.length === 0) {
+      gridBody.innerHTML = '<div style="padding: 1rem; text-align: center; color: #6c757d; font-size: 0.875rem;">No capacity data found for this facility.</div>';
+      return;
+    }
+
+    data.forEach(item => {
+      const tier = getTier(item.capacityPercentage);
+      const friendlyDate = formatDate(item.weekStartDate);
       
       const row = document.createElement('div');
       row.className = `hm-row hm-tier-${tier}`;
       
       const dateCell = document.createElement('div');
       dateCell.className = 'hm-date-cell';
-      dateCell.textContent = item.date;
+      dateCell.textContent = friendlyDate;
       
       const statusCell = document.createElement('div');
       statusCell.className = `hm-status-cell bg-${tier}`;
-      statusCell.dataset.capacity = item.capacity;
-      statusCell.dataset.date = item.date;
-      statusCell.setAttribute('aria-label', `${item.capacity}% full for week of ${item.date}`);
+      statusCell.dataset.capacity = item.capacityPercentage;
+      statusCell.dataset.date = friendlyDate;
+      statusCell.setAttribute('aria-label', `${item.capacityPercentage}% full for week of ${friendlyDate}`);
       
       row.appendChild(dateCell);
       row.appendChild(statusCell);
       gridBody.appendChild(row);
     });
-  }
+  };
+
+  const fetchHeatmapData = async () => {
+    try {
+      // CSRF token is required for authenticated Headless API calls
+      const headers = {
+        'Content-Type': 'application/json',
+      };
+      if (window.Liferay && Liferay.authToken) {
+        headers['x-csrf-token'] = Liferay.authToken;
+      }
+
+      // Fetch Roll Weeks and sort by date ascending
+      const response = await fetch('/o/c/rollweeks/?sort=weekStartDate:asc&pageSize=50', { headers });
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const json = await response.json();
+      
+      // Filter by facility (client-side to handle complex Picklist structures gracefully)
+      const filteredData = json.items.filter(item => {
+        const facValue = item.facilityCode.key || item.facilityCode.name || item.facilityCode;
+        return typeof facValue === 'string' && (facValue.toLowerCase() === targetFacility.toLowerCase() || facValue.toLowerCase() === 'skv' && targetFacility.toLowerCase() === 'saukville' || facValue.toLowerCase() === 'cle' && targetFacility.toLowerCase() === 'cleveland');
+      });
+
+      renderGrid(filteredData);
+
+    } catch (error) {
+      console.error('Error fetching capacity data:', error);
+      if (gridBody) {
+        gridBody.innerHTML = '<div style="padding: 1rem; text-align: center; color: #e03131; font-size: 0.875rem;">Error loading data.</div>';
+      }
+    }
+  };
 
   // Tooltip Interaction
   if (gridBody && tooltip) {
     gridBody.addEventListener('mouseover', (e) => {
       if (e.target.classList.contains('hm-status-cell')) {
-        const capacity = e.target.dataset.capacity;
+        const capacity = parseInt(e.target.dataset.capacity, 10);
         let label = capacity >= 100 ? "Closed/Maintenance" : `${capacity}% Full`;
         
         tooltip.textContent = label;
         tooltip.style.display = 'block';
         
         const rect = e.target.getBoundingClientRect();
-        
-        // Position fixed tooltip
         tooltip.style.top = `${rect.top - 5}px`;
         tooltip.style.left = `${rect.left + (rect.width / 2)}px`;
       }
@@ -104,4 +130,7 @@ if (fragmentElement) {
       }
     });
   }
+
+  // Initial Fetch
+  fetchHeatmapData();
 }

@@ -1,0 +1,44 @@
+[
+  {
+    "externalReferenceCode": "MF-CW-2026-05-31",
+    "accountId": "Charter Wire",
+    "forecastQuantity": 45000,
+    "releaseQuantity": 45000,
+    "r_mipsForecastToRollWeek_c_rollWeekERC": "RW-CLE-2026-05-31"
+  },
+  {
+    "externalReferenceCode": "MF-CW-2026-06-07",
+    "accountId": "Charter Wire",
+    "forecastQuantity": 40000,
+    "releaseQuantity": 38000,
+    "r_mipsForecastToRollWeek_c_rollWeekERC": "RW-CLE-2026-06-07"
+  },
+  {
+    "externalReferenceCode": "MF-CW-2026-06-14",
+    "accountId": "Charter Wire",
+    "forecastQuantity": 55000,
+    "releaseQuantity": 0,
+    "r_mipsForecastToRollWeek_c_rollWeekERC": "RW-CLE-2026-06-14"
+  },
+  {
+    "externalReferenceCode": "MF-CW-2026-06-21",
+    "accountId": "Charter Wire",
+    "forecastQuantity": 60000,
+    "releaseQuantity": 0,
+    "r_mipsForecastToRollWeek_c_rollWeekERC": "RW-CLE-2026-06-21"
+  },
+  {
+    "externalReferenceCode": "MF-CW-2026-06-28",
+    "accountId": "Charter Wire",
+    "forecastQuantity": 62000,
+    "releaseQuantity": 0,
+    "r_mipsForecastToRollWeek_c_rollWeekERC": "RW-CLE-2026-06-28"
+  },
+  {
+    "externalReferenceCode": "MF-CW-2026-07-05",
+    "accountId": "Charter Wire",
+    "forecastQuantity": 41000,
+    "releaseQuantity": 0,
+    "r_mipsForecastToRollWeek_c_rollWeekERC": "RW-CLE-2026-07-05"
+  }
+]

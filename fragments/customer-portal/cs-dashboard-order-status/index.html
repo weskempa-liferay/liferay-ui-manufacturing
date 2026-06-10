@@ -26,58 +26,10 @@
           <th>Due Date</th>
         </tr>
       </thead>
-      <tbody class="orders-tbody">
-        <!-- Row 1 -->
-        <tr data-product-type="coil">
-          <td class="cell-order">#SO-44821</td>
-          <td>PO-7834</td>
-          <td>HR Coil 0.125" x 48"</td>
-          <td>ASTM A36</td>
-          <td><span class="status-pill status-production">In Production</span></td>
-          <td>WK 23</td>
-          <td>Jun 9, 2026</td>
-        </tr>
-        <!-- Row 2 -->
-        <tr data-product-type="sbq-bar">
-          <td class="cell-order">#SO-44819</td>
-          <td>PO-7831</td>
-          <td>SBQ Round Bar 2.5"</td>
-          <td>4140</td>
-          <td><span class="status-pill status-scheduled">Scheduled</span></td>
-          <td>WK 24</td>
-          <td>Jun 16, 2026</td>
-        </tr>
-        <!-- Row 3 -->
-        <tr data-product-type="coil">
-          <td class="cell-order">#SO-44815</td>
-          <td>PO-7828</td>
-          <td>CR Coil 0.060" x 36"</td>
-          <td>1008</td>
-          <td><span class="status-pill status-shipped">Shipped</span></td>
-          <td>WK 22</td>
-          <td>Jun 2, 2026</td>
-        </tr>
-        <!-- Row 4 -->
-        <tr data-product-type="sbq-bar">
-          <td class="cell-order">#SO-44812</td>
-          <td>PO-7825</td>
-          <td>SBQ Flat Bar 1" x 4"</td>
-          <td>1045</td>
-          <td><span class="status-pill status-invoiced">Invoiced</span></td>
-          <td>WK 21</td>
-          <td>May 26, 2026</td>
-        </tr>
-        <!-- Row 5 -->
-        <tr data-product-type="coil">
-          <td class="cell-order">#SO-44808</td>
-          <td>PO-7820</td>
-          <td>HR Coil 0.250" x 60"</td>
-          <td>ASTM A572</td>
-          <td><span class="status-pill status-late">Rolling Late</span></td>
-          <td>WK 22</td>
-          <td>Jun 4, 2026</td>
-        </tr>
+      <tbody class="orders-tbody" id="orders-dynamic-tbody">
       </tbody>
+    </table>
+    <div class="orders-loader" id="orders-loader" style="display: none;"><div class="orders-spinner"></div></div>
     </table>
   </div>
 </div>

@@ -175,3 +175,25 @@
   border-style: solid;
   border-color: #212529 transparent transparent transparent;
 }
+
+/* Loading Spinner */
+.hm-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hm-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #e9ecef;
+  border-top: 3px solid #EF4A24;
+  border-radius: 50%;
+  animation: hm-spin 1s linear infinite;
+}
+
+@keyframes hm-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

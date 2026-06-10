@@ -1,0 +1,55 @@
+{
+  "objectDefinitionExternalReferenceCode": "MipsForecast",
+  "name": "Mips Forecast",
+  "label": {
+    "en_US": "MIPS Forecast"
+  },
+  "pluralLabel": {
+    "en_US": "MIPS Forecasts"
+  },
+  "panelCategoryKey": "control_panel.object",
+  "scope": "company",
+  "status": {
+    "label_i18n": "Approved"
+  },
+  "objectFields": [
+    {
+      "name": "forecastQuantity",
+      "businessType": "Integer",
+      "label": {
+        "en_US": "Forecast Quantity"
+      },
+      "type": "Integer",
+      "required": true
+    },
+    {
+      "name": "releaseQuantity",
+      "businessType": "Integer",
+      "label": {
+        "en_US": "Release Quantity"
+      },
+      "type": "Integer",
+      "required": false
+    },
+    {
+      "name": "accountId",
+      "businessType": "Text",
+      "label": {
+        "en_US": "Account ID"
+      },
+      "type": "String",
+      "required": false
+    }
+  ],
+  "objectRelationships": [
+    {
+      "name": "mipsForecastToRollWeek",
+      "label": {
+        "en_US": "Forecast to Roll Week"
+      },
+      "type": "manyToMany",
+      "objectDefinitionERC2": "RollWeek",
+      "deletionType": "cascade"
+    }
+  ]
+}

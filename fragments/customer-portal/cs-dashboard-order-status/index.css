@@ -161,3 +161,26 @@
     padding: 0.75rem 1.25rem;
   }
 }
+
+/* Loading Spinner */
+.orders-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 3rem;
+}
+
+.orders-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #e9ecef;
+  border-top: 3px solid #FF6B00;
+  border-radius: 50%;
+  animation: orders-spin 1s linear infinite;
+}
+
+@keyframes orders-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

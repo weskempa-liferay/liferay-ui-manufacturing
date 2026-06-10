@@ -1,0 +1,44 @@
+[
+  {
+    "externalReferenceCode": "SZ-SKV-1",
+    "sizeValue": "17/32",
+    "sequenceOrder": 1,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-SKV-2026-05-31"
+  },
+  {
+    "externalReferenceCode": "SZ-SKV-2",
+    "sizeValue": "45/64",
+    "sequenceOrder": 2,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-SKV-2026-05-31"
+  },
+  {
+    "externalReferenceCode": "SZ-SKV-3",
+    "sizeValue": "33/64",
+    "sequenceOrder": 3,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-SKV-2026-05-31"
+  },
+  {
+    "externalReferenceCode": "SZ-SKV-4",
+    "sizeValue": "1/2",
+    "sequenceOrder": 1,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-SKV-2026-06-07"
+  },
+  {
+    "externalReferenceCode": "SZ-SKV-5",
+    "sizeValue": "5/8",
+    "sequenceOrder": 2,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-SKV-2026-06-07"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-1",
+    "sizeValue": "57/64",
+    "sequenceOrder": 1,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-05-31"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2",
+    "sizeValue": "29/32",
+    "sequenceOrder": 2,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-05-31"
+  }
+]

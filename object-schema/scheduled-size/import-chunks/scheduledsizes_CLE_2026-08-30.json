@@ -1,0 +1,200 @@
+[
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-1",
+    "sizeValue": "49/64",
+    "sequenceOrder": 1,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-2",
+    "sizeValue": "3/4",
+    "sequenceOrder": 2,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-3",
+    "sizeValue": "39/64",
+    "sequenceOrder": 3,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-4",
+    "sizeValue": "31/64",
+    "sequenceOrder": 4,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-5",
+    "sizeValue": "25/64",
+    "sequenceOrder": 5,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-6",
+    "sizeValue": "10MM",
+    "sequenceOrder": 6,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-7",
+    "sizeValue": "1-5/32",
+    "sequenceOrder": 7,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-8",
+    "sizeValue": "1-11/64",
+    "sequenceOrder": 8,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-9",
+    "sizeValue": "1-3/16",
+    "sequenceOrder": 9,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-10",
+    "sizeValue": "1-13/64",
+    "sequenceOrder": 10,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-11",
+    "sizeValue": "1-7/32",
+    "sequenceOrder": 11,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-12",
+    "sizeValue": "19/32",
+    "sequenceOrder": 12,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-13",
+    "sizeValue": "23/32",
+    "sequenceOrder": 13,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-14",
+    "sizeValue": "37/64",
+    "sequenceOrder": 14,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-15",
+    "sizeValue": "3/8",
+    "sequenceOrder": 15,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-16",
+    "sizeValue": "1-1/8",
+    "sequenceOrder": 16,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-17",
+    "sizeValue": "53/64",
+    "sequenceOrder": 17,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-18",
+    "sizeValue": "13/16",
+    "sequenceOrder": 18,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-19",
+    "sizeValue": "21/32",
+    "sequenceOrder": 19,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-20",
+    "sizeValue": "17/32",
+    "sequenceOrder": 20,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-21",
+    "sizeValue": "55/64",
+    "sequenceOrder": 21,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-22",
+    "sizeValue": "11/16",
+    "sequenceOrder": 22,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-23",
+    "sizeValue": "35/64",
+    "sequenceOrder": 23,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-24",
+    "sizeValue": "14MM",
+    "sequenceOrder": 24,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-25",
+    "sizeValue": "7/16",
+    "sequenceOrder": 25,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-26",
+    "sizeValue": "11/32",
+    "sequenceOrder": 26,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-27",
+    "sizeValue": "45/64",
+    "sequenceOrder": 27,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-28",
+    "sizeValue": "18MM",
+    "sequenceOrder": 28,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-29",
+    "sizeValue": "9/16",
+    "sequenceOrder": 29,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-30",
+    "sizeValue": "29/64",
+    "sequenceOrder": 30,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-31",
+    "sizeValue": "23/64",
+    "sequenceOrder": 31,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-32",
+    "sizeValue": "1",
+    "sequenceOrder": 32,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  },
+  {
+    "externalReferenceCode": "SZ-CLE-2026-08-30-33",
+    "sizeValue": "1-1/16",
+    "sequenceOrder": 33,
+    "r_rollWeekToScheduledSize_c_rollWeekERC": "RW-CLE-2026-08-30"
+  }
+]

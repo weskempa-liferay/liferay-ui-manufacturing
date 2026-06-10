@@ -193,3 +193,26 @@
 .mips-btn-secondary:hover {
   background: #e9ecef;
 }
+
+/* Loading Spinner */
+.mips-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 3rem;
+}
+
+.mips-spinner {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #e9ecef;
+  border-top: 3px solid #EF4A24;
+  border-radius: 50%;
+  animation: mips-spin 1s linear infinite;
+}
+
+@keyframes mips-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
