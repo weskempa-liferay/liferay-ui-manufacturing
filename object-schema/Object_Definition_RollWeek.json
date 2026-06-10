@@ -1,0 +1,65 @@
+{
+  "name": "RollWeek",
+  "label": {
+    "en_US": "Roll Week"
+  },
+  "pluralLabel": {
+    "en_US": "Roll Weeks"
+  },
+  "scope": "company",
+  "active": true,
+  "system": false,
+  "panelCategoryKey": "control_panel.object",
+  "titleObjectFieldName": "facilityCode",
+  "objectFields": [
+    {
+      "name": "facilityCode",
+      "label": {
+        "en_US": "Facility Code"
+      },
+      "type": "String",
+      "DBType": "String",
+      "businessType": "Text",
+      "required": true,
+      "indexed": true,
+      "indexedAsKeyword": true,
+      "system": false
+    },
+    {
+      "name": "weekStartDate",
+      "label": {
+        "en_US": "Week Start Date"
+      },
+      "type": "Date",
+      "DBType": "Date",
+      "businessType": "Date",
+      "required": true,
+      "indexed": true,
+      "system": false
+    },
+    {
+      "name": "millInOperation",
+      "label": {
+        "en_US": "Mill In Operation"
+      },
+      "type": "Boolean",
+      "DBType": "Boolean",
+      "businessType": "Boolean",
+      "required": true,
+      "indexed": false,
+      "system": false
+    },
+    {
+      "name": "capacityPercentage",
+      "label": {
+        "en_US": "Capacity Percentage"
+      },
+      "type": "Integer",
+      "DBType": "Integer",
+      "businessType": "Integer",
+      "required": false,
+      "indexed": false,
+      "system": false
+    }
+  ]
+}

@@ -7,6 +7,22 @@
           "type": "text",
           "label": "Alerts API Endpoint",
           "defaultValue": ""
+        },
+        {
+          "name": "visibleAlertTypes",
+          "type": "select",
+          "label": "Visible Alert Types",
+          "typeOptions": {
+            "multiple": true
+          },
+          "options": [
+            { "value": "late", "label": "Late" },
+            { "value": "status", "label": "Status Change" },
+            { "value": "shipped", "label": "Shipped" },
+            { "value": "document", "label": "Document" },
+            { "value": "capacity", "label": "Capacity" }
+          ],
+          "defaultValue": ["late", "status", "shipped", "document", "capacity"]
         }
       ]
     }

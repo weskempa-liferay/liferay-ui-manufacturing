@@ -1,0 +1,9 @@
+{
+  "configurationPath": "configuration.json",
+  "cssPath": "index.css",
+  "htmlPath": "index.html",
+  "jsPath": "index.js",
+  "name": "Rolling Sizes Matrix",
+  "type": "component",
+  "icon": "table"
+}

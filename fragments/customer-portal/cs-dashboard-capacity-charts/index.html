@@ -1,0 +1,133 @@
+[#assign isSideBySide = (configuration.chartLayout!"side-by-side") == "side-by-side"]
+
+<div class="cs-capacity-charts ${isSideBySide?then('layout-side-by-side', 'layout-stacked')}">
+  
+  <!-- Saukville Chart -->
+  <div class="chart-panel">
+    <div class="chart-header">
+      <h3 class="chart-title" data-lfr-editable-id="saukville-title" data-lfr-editable-type="text">Saukville Capacity Trend</h3>
+      <span class="chart-subtitle" data-lfr-editable-id="saukville-sub" data-lfr-editable-type="text">6-Month Projection</span>
+    </div>
+    
+    <div class="chart-body">
+      <div class="chart-y-axis">
+        <span>100%</span>
+        <span>75%</span>
+        <span>50%</span>
+        <span>25%</span>
+        <span>0%</span>
+      </div>
+      
+      <div class="chart-plot-area">
+        <!-- Jan -->
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar bar-saukville" style="height: 65%;" data-val="65%"></div>
+          </div>
+          <span class="chart-x-label">Jan</span>
+        </div>
+        <!-- Feb -->
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar bar-saukville" style="height: 58%;" data-val="58%"></div>
+          </div>
+          <span class="chart-x-label">Feb</span>
+        </div>
+        <!-- Mar -->
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar bar-saukville" style="height: 80%;" data-val="80%"></div>
+          </div>
+          <span class="chart-x-label">Mar</span>
+        </div>
+        <!-- Apr -->
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar bar-saukville" style="height: 82%;" data-val="82%"></div>
+          </div>
+          <span class="chart-x-label">Apr</span>
+        </div>
+        <!-- May -->
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar bar-saukville" style="height: 55%;" data-val="55%"></div>
+          </div>
+          <span class="chart-x-label">May</span>
+        </div>
+        <!-- Jun -->
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar bar-saukville" style="height: 52%;" data-val="52%"></div>
+          </div>
+          <span class="chart-x-label">Jun</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cleveland Chart -->
+  <div class="chart-panel">
+    <div class="chart-header">
+      <h3 class="chart-title" data-lfr-editable-id="cleveland-title" data-lfr-editable-type="text">Cleveland Capacity Trend</h3>
+      <span class="chart-subtitle" data-lfr-editable-id="cleveland-sub" data-lfr-editable-type="text">6-Month Projection</span>
+    </div>
+    
+    <div class="chart-body">
+      <div class="chart-y-axis">
+        <span>100%</span>
+        <span>75%</span>
+        <span>50%</span>
+        <span>25%</span>
+        <span>0%</span>
+      </div>
+      
+      <div class="chart-plot-area">
+        <!-- Jan -->
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar bar-cleveland" style="height: 28%;" data-val="28%"></div>
+          </div>
+          <span class="chart-x-label">Jan</span>
+        </div>
+        <!-- Feb -->
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar bar-cleveland" style="height: 48%;" data-val="48%"></div>
+          </div>
+          <span class="chart-x-label">Feb</span>
+        </div>
+        <!-- Mar -->
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar bar-cleveland" style="height: 40%;" data-val="40%"></div>
+          </div>
+          <span class="chart-x-label">Mar</span>
+        </div>
+        <!-- Apr -->
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar bar-cleveland" style="height: 19%;" data-val="19%"></div>
+          </div>
+          <span class="chart-x-label">Apr</span>
+        </div>
+        <!-- May -->
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar bar-cleveland" style="height: 85%;" data-val="85%"></div>
+          </div>
+          <span class="chart-x-label">May</span>
+        </div>
+        <!-- Jun -->
+        <div class="chart-bar-col">
+          <div class="chart-bar-track">
+            <div class="chart-bar bar-cleveland" style="height: 27%;" data-val="27%"></div>
+          </div>
+          <span class="chart-x-label">Jun</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Tooltip -->
+  <div class="chart-tooltip" id="chart-tooltip" style="display: none;"></div>
+</div>

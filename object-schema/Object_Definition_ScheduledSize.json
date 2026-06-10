@@ -1,0 +1,41 @@
+{
+  "name": "ScheduledSize",
+  "label": {
+    "en_US": "Scheduled Size"
+  },
+  "pluralLabel": {
+    "en_US": "Scheduled Sizes"
+  },
+  "scope": "company",
+  "active": true,
+  "system": false,
+  "panelCategoryKey": "control_panel.object",
+  "titleObjectFieldName": "sizeValue",
+  "objectFields": [
+    {
+      "name": "sizeValue",
+      "label": {
+        "en_US": "Size Value"
+      },
+      "type": "String",
+      "DBType": "String",
+      "businessType": "Text",
+      "required": true,
+      "indexed": true,
+      "indexedAsKeyword": true,
+      "system": false
+    },
+    {
+      "name": "sequenceOrder",
+      "label": {
+        "en_US": "Sequence Order"
+      },
+      "type": "Integer",
+      "DBType": "Integer",
+      "businessType": "Integer",
+      "required": false,
+      "indexed": true,
+      "system": false
+    }
+  ]
+}

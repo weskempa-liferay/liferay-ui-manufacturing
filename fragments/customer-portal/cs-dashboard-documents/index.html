@@ -1,7 +1,16 @@
 <div class="cs-dash-docs">
-  <div class="docs-header">
+  <div class="docs-header" style="display: flex; justify-content: space-between; align-items: center;">
     <h2 class="docs-title" data-lfr-editable-id="docs-title" data-lfr-editable-type="text">Recent Documents</h2>
-    <a data-lfr-editable-id="docs-view-all-link" data-lfr-editable-type="link"><a href="/web/customer-portal/documents" class="docs-view-all">View All</a></a>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <select class="docs-filter-select" aria-label="Filter documents by type" style="padding: 0.25rem 0.5rem; border: 1px solid #e9ecef; border-radius: 4px; font-family: inherit; font-size: 0.875rem;">
+        <option value="all">All Types</option>
+        <option value="bol">BOL</option>
+        <option value="cert">Material Certs</option>
+        <option value="invoice">Invoices</option>
+        <option value="ack">Acknowledgements</option>
+      </select>
+      <a data-lfr-editable-id="docs-view-all-link" data-lfr-editable-type="link"><a href="/web/customer-portal/documents" class="docs-view-all">View All</a></a>
+    </div>
   </div>
 
   <ul class="docs-list">

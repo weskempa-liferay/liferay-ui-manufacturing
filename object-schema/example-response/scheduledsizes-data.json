@@ -1,0 +1,117 @@
+{
+  "actions": {
+    "updateBatch": {
+      "method": "PUT",
+      "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/batch"
+    },
+    "get": {
+      "method": "GET",
+      "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/"
+    },
+    "create": {
+      "method": "POST",
+      "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/"
+    },
+    "createBatch": {
+      "method": "POST",
+      "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/batch"
+    },
+    "deleteBatch": {
+      "method": "DELETE",
+      "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/batch"
+    }
+  },
+  "facets": [],
+  "items": [
+    {
+      "actions": {
+        "get-by-scope": {
+          "method": "GET",
+          "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/scopes/0"
+        },
+        "move-replace": {
+          "method": "POST",
+          "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/44845/by-object-entry-folder-id/{objectEntryFolderId}/move-replace"
+        },
+        "move": {
+          "method": "POST",
+          "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/44845/by-object-entry-folder-id/{objectEntryFolderId}/move"
+        },
+        "copy-replace": {
+          "method": "POST",
+          "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/44845/by-object-entry-folder-id/{objectEntryFolderId}/copy-replace"
+        },
+        "versions": {
+          "method": "GET",
+          "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/by-external-reference-code/1c286c62-7e62-cea3-f96f-d9d604d18d9b/versions"
+        },
+        "permissions": {
+          "method": "GET",
+          "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/44845/permissions"
+        },
+        "expire": {
+          "method": "POST",
+          "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/by-external-reference-code/1c286c62-7e62-cea3-f96f-d9d604d18d9b/expire"
+        },
+        "get": {
+          "method": "GET",
+          "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/44845"
+        },
+        "replace": {
+          "method": "PUT",
+          "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/44845"
+        },
+        "update": {
+          "method": "PATCH",
+          "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/44845"
+        },
+        "copy": {
+          "method": "POST",
+          "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/44845/by-object-entry-folder-id/{objectEntryFolderId}/copy"
+        },
+        "delete": {
+          "method": "DELETE",
+          "href": "https://webserver-lctchartermfg-prd.lfr.cloud/o/c/scheduledsizes/44845"
+        }
+      },
+      "creator": {
+        "additionalName": "",
+        "contentType": "UserAccount",
+        "externalReferenceCode": "d99f6e59-d567-c62a-81ad-56f13ea5f441",
+        "familyName": "Test",
+        "givenName": "Test",
+        "id": 20131,
+        "image": "/image/user_portrait?img_id=37419&img_id_token=fbaHSCW1Yaz4xlZD8cBhJBLpwnk%3D&t=1781104325992",
+        "name": "Test Test"
+      },
+      "dateCreated": "2026-06-10T15:28:45Z",
+      "dateModified": "2026-06-10T15:28:45Z",
+      "defaultLanguageId": "en_US",
+      "externalReferenceCode": "1c286c62-7e62-cea3-f96f-d9d604d18d9b",
+      "friendlyUrlPath": "1c286c62-7e62-cea3-f96f-d9d604d18d9b",
+      "friendlyUrlPath_i18n": {
+        "en_US": "1c286c62-7e62-cea3-f96f-d9d604d18d9b"
+      },
+      "id": 44845,
+      "keywords": [],
+      "objectEntryFolderExternalReferenceCode": "",
+      "objectEntryFolderId": 0,
+      "scopeId": 0,
+      "status": {
+        "code": 0,
+        "label": "approved",
+        "label_i18n": "Approved"
+      },
+      "taxonomyCategoryBriefs": [],
+      "r_rollWeekToScheduledSize_c_rollWeekERC": "97c50bc8-e274-8757-32e0-4693b9486dfb",
+      "r_rollWeekToScheduledSize_c_rollWeekId": 44840,
+      "sizeValue": "17/32",
+      "rollWeekToScheduledSizeERC": "97c50bc8-e274-8757-32e0-4693b9486dfb",
+      "sequenceOrder": 1
+    }
+  ],
+  "lastPage": 1,
+  "page": 1,
+  "pageSize": 20,
+  "totalCount": 1
+}

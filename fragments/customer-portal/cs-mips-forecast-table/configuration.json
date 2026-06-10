@@ -1,0 +1,18 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "lockedWeeks",
+          "type": "number",
+          "label": "Number of Locked Weeks",
+          "defaultValue": 2,
+          "typeOptions": {
+            "min": 0,
+            "max": 16
+          }
+        }
+      ]
+    }
+  ]
+}

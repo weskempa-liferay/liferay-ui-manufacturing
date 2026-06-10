@@ -1,0 +1,14 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "facilityName",
+          "type": "text",
+          "label": "Facility Name",
+          "defaultValue": "Saukville"
+        }
+      ]
+    }
+  ]
+}

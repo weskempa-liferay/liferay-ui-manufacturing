@@ -1,0 +1,26 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "chartLayout",
+          "type": "select",
+          "label": "Layout Style",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "side-by-side",
+                "label": "Side-by-Side (50/50)"
+              },
+              {
+                "value": "stacked",
+                "label": "Stacked (Full Width)"
+              }
+            ]
+          },
+          "defaultValue": "side-by-side"
+        }
+      ]
+    }
+  ]
+}

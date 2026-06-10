@@ -1,0 +1,41 @@
+[
+  {
+    "facilityCode": "SKV",
+    "weekStartDate": "2026-05-31",
+    "millInOperation": true,
+    "capacityPercentage": 100,
+    "rollWeekToSizes": [
+      { "sizeValue": "17/32", "sequenceOrder": 1 },
+      { "sizeValue": "45/64", "sequenceOrder": 2 },
+      { "sizeValue": "33/64", "sequenceOrder": 3 }
+    ]
+  },
+  {
+    "facilityCode": "SKV",
+    "weekStartDate": "2026-06-07",
+    "millInOperation": true,
+    "capacityPercentage": 100,
+    "rollWeekToSizes": [
+      { "sizeValue": "45/64", "sequenceOrder": 1 },
+      { "sizeValue": "9/16", "sequenceOrder": 2 }
+    ]
+  },
+  {
+    "facilityCode": "SKV",
+    "weekStartDate": "2026-07-05",
+    "millInOperation": false,
+    "capacityPercentage": 100,
+    "rollWeekToSizes": []
+  },
+  {
+    "facilityCode": "CLE",
+    "weekStartDate": "2026-05-31",
+    "millInOperation": true,
+    "capacityPercentage": 85,
+    "rollWeekToSizes": [
+      { "sizeValue": "57/64", "sequenceOrder": 1 },
+      { "sizeValue": "29/32", "sequenceOrder": 2 },
+      { "sizeValue": "9/32", "sequenceOrder": 3 }
+    ]
+  }
+]

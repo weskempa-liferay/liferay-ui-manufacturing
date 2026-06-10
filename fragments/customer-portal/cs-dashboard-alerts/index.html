@@ -5,6 +5,7 @@
   </div>
 
   <ul class="alerts-list">
+    [#if (configuration.visibleAlertTypes!"")?contains("late")]
     <!-- Alert 1: Late -->
     <li class="alert-item alert-severity-critical">
       <div class="alert-indicator"></div>
@@ -20,7 +21,9 @@
       </div>
       <button class="alert-dismiss" aria-label="Dismiss alert">&times;</button>
     </li>
+    [/#if]
 
+    [#if (configuration.visibleAlertTypes!"")?contains("status")]
     <!-- Alert 2: Status Change -->
     <li class="alert-item alert-severity-info">
       <div class="alert-indicator"></div>
@@ -36,7 +39,9 @@
       </div>
       <button class="alert-dismiss" aria-label="Dismiss alert">&times;</button>
     </li>
+    [/#if]
 
+    [#if (configuration.visibleAlertTypes!"")?contains("shipped")]
     <!-- Alert 3: Shipped -->
     <li class="alert-item alert-severity-success">
       <div class="alert-indicator"></div>
@@ -52,7 +57,9 @@
       </div>
       <button class="alert-dismiss" aria-label="Dismiss alert">&times;</button>
     </li>
+    [/#if]
 
+    [#if (configuration.visibleAlertTypes!"")?contains("document")]
     <!-- Alert 4: Document -->
     <li class="alert-item alert-severity-info">
       <div class="alert-indicator"></div>
@@ -68,7 +75,9 @@
       </div>
       <button class="alert-dismiss" aria-label="Dismiss alert">&times;</button>
     </li>
+    [/#if]
 
+    [#if (configuration.visibleAlertTypes!"")?contains("capacity")]
     <!-- Alert 5: Capacity -->
     <li class="alert-item alert-severity-warn">
       <div class="alert-indicator"></div>
@@ -84,5 +93,6 @@
       </div>
       <button class="alert-dismiss" aria-label="Dismiss alert">&times;</button>
     </li>
+    [/#if]
   </ul>
 </div>

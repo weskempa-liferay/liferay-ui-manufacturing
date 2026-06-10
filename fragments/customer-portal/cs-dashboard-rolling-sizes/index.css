@@ -1,0 +1,195 @@
+.cs-rolling-sizes {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 2rem;
+  border: 1px solid #e9ecef;
+}
+
+.rs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rs-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0B1B3D;
+  margin: 0 0 0.25rem 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+.rs-subtitle {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.rs-search-wrapper {
+  position: relative;
+  width: 300px;
+}
+
+.rs-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: #adb5bd;
+}
+
+.rs-search-input {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.25rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.rs-search-input:focus {
+  outline: none;
+  border-color: #EF4A24;
+  box-shadow: 0 0 0 3px rgba(239, 74, 36, 0.1);
+}
+
+.rs-timeline-wrapper {
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.rs-timeline {
+  display: flex;
+  gap: 0.5rem;
+  min-width: max-content;
+}
+
+.rs-week-card {
+  width: 100px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  position: relative;
+}
+
+.rs-week-card:hover {
+  border-color: #adb5bd;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.rs-week-card.active {
+  border-color: #EF4A24;
+  background: #fff5f0;
+}
+
+.rs-week-card.highlight {
+  border-color: #2b8a3e;
+  background: #ebfbee;
+}
+
+.rs-week-card.disabled {
+  background: #f8f9fa;
+  border-style: dashed;
+  color: #adb5bd;
+  cursor: not-allowed;
+}
+
+.rs-week-card.disabled:hover {
+  box-shadow: none;
+  border-color: #e9ecef;
+}
+
+.rs-week-date {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.25rem;
+}
+
+.rs-week-card.disabled .rs-week-date {
+  color: #adb5bd;
+}
+
+.rs-week-count {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0B1B3D;
+}
+
+.rs-week-card.disabled .rs-week-count {
+  color: #adb5bd;
+  font-size: 0.875rem;
+}
+
+.rs-detail-panel {
+  margin-top: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e9ecef;
+}
+
+.rs-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.rs-detail-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0B1B3D;
+  margin: 0;
+}
+
+.rs-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #6c757d;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.rs-close-btn:hover {
+  color: #212529;
+}
+
+.rs-detail-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.rs-size-pill {
+  background: #ffffff;
+  border: 1px solid #ced4da;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+.rs-size-pill.match {
+  background: #2b8a3e;
+  color: #ffffff;
+  border-color: #2b8a3e;
+}

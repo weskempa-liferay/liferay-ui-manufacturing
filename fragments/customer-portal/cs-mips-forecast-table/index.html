@@ -1,0 +1,67 @@
+<div class="cs-mips-forecast">
+  <div class="mips-header">
+    <h2 class="mips-title" data-lfr-editable-id="mips-title" data-lfr-editable-type="text">16-Week Rolling Forecast & Release</h2>
+    <p class="mips-subtitle" data-lfr-editable-id="mips-subtitle" data-lfr-editable-type="text">
+      Please enter your forecast quantities. The first two weeks are locked from changes. Weekly releases must be submitted for locked periods.
+    </p>
+  </div>
+
+  <div class="mips-table-container">
+    <table class="mips-table">
+      <thead>
+        <tr>
+          <th class="mips-th-sticky">Metric</th>
+          [#list 1..16 as i]
+            <th>WK ${i}</th>
+          [/#list]
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Forecast Row -->
+        <tr>
+          <td class="mips-td-sticky metric-label">
+            <strong>Forecast Qty</strong>
+            <span class="metric-sub">(Lbs)</span>
+          </td>
+          [#list 1..16 as i]
+            [#assign isLocked = (i <= (configuration.lockedWeeks!"2")?number)]
+            <td class="mips-cell ${isLocked?then('mips-cell-locked', '')}">
+              <div class="input-wrapper">
+                <input type="number" class="mips-input mips-forecast-input" data-week="${i}" ${isLocked?then('disabled', '')} value="${isLocked?then(45000, 0)}" min="0" aria-label="Forecast Week ${i}" />
+                [#if isLocked]
+                  <svg class="locked-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15V17M6 11V7C6 5.4087 6.63214 3.88258 7.75736 2.75736C8.88258 1.63214 10.4087 1 12 1C13.5913 1 15.1174 1.63214 16.2426 2.75736C17.3679 3.88258 18 5.4087 18 7V11M5 11H19C20.1046 11 21 11.8954 21 13V21C21 22.1046 20.1046 23 19 23H5C3.89543 23 3 22.1046 3 21V13C3 11.8954 3.89543 11 5 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                [/#if]
+              </div>
+            </td>
+          [/#list]
+        </tr>
+        
+        <!-- Release Row -->
+        <tr>
+          <td class="mips-td-sticky metric-label">
+            <strong>Release Qty</strong>
+            <span class="metric-sub">(Lbs)</span>
+          </td>
+          [#list 1..16 as i]
+            [#assign isLocked = (i <= (configuration.lockedWeeks!"2")?number)]
+            <td class="mips-cell ${isLocked?then('mips-cell-highlight', '')}">
+              <div class="input-wrapper">
+                <input type="number" class="mips-input mips-release-input" data-week="${i}" value="0" min="0" aria-label="Release Week ${i}" />
+              </div>
+            </td>
+          [/#list]
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mips-footer">
+    <div class="mips-validation-message" id="mips-msg" style="display: none;"></div>
+    <div class="mips-actions">
+      <button class="mips-btn mips-btn-secondary" id="mips-save-draft">Save Draft</button>
+      <button class="mips-btn mips-btn-primary" id="mips-submit-btn">Submit Forecast &amp; Release</button>
+    </div>
+  </div>
+</div>

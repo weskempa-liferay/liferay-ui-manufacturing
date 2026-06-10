@@ -18,11 +18,13 @@
   </div>
 
   <div class="dash-header-right">
+    [#if configuration.showAccountRep!true]
     <div class="dash-rep-info">
       <span class="dash-rep-label">Your Account Rep</span>
       <span class="dash-rep-name" data-lfr-editable-id="dash-rep-name" data-lfr-editable-type="text">Sarah Mitchell</span>
       <span class="dash-rep-phone" data-lfr-editable-id="dash-rep-phone" data-lfr-editable-type="text">414-555-0180</span>
     </div>
+    [/#if]
     <div class="dash-avatar">
       <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
         <circle cx="20" cy="20" r="20" fill="#0B1B3D"/>

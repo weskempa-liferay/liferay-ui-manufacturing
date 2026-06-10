@@ -1,0 +1,9 @@
+{
+  "configurationPath": "configuration.json",
+  "cssPath": "index.css",
+  "htmlPath": "index.html",
+  "jsPath": "index.js",
+  "name": "Data Visualization - Capacity Charts",
+  "type": "component",
+  "icon": "chart"
+}

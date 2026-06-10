@@ -131,3 +131,10 @@ Standard Bootstrap data-toggle attributes can be unreliable when elements are in
 
 ### 7.5 State Management
 Use a state object within the if (fragmentElement) block to track the current ID, page, filter, and loaded data. This keeps your render functions pure and makes debugging significantly easier.
+
+### 7.6 FreeMarker Configuration Quirks & Type Safety
+Liferay's configuration variables are sometimes passed into the FreeMarker context with unexpected types, leading to syntax or comparison errors during rendering. Always use defensive coding:
+- **Number Configurations**: Even if a field is defined as `"type": "number"` in `configuration.json`, it may evaluate as a String scalar (`f.t.SimpleScalar`) in FreeMarker. When comparing against integers, explicitly cast it and provide a fallback:
+    `[#assign myNum = (configuration.myNumberField!"0")?number]`
+- **Multiselect Configurations**: Fields with `"typeOptions": { "multiple": true }` do NOT evaluate to a FreeMarker sequence (array). Instead, Liferay concatenates the selected options into a single comma-separated string scalar. Do NOT use `?join(",")`. Check for values using string `?contains()` and provide an empty string fallback:
+    `[#if (configuration.myMultiSelect!"")?contains("targetValue")]`

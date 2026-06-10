@@ -1,0 +1,177 @@
+.cs-capacity-heatmap {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid #e9ecef;
+  max-width: 400px; /* Constrain width for sidebar layout */
+  position: relative;
+}
+
+.hm-header {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.hm-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0B1B3D;
+  margin: 0;
+  background: #fff3cd; /* Yellow highlight from spreadsheet */
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.hm-grid-container {
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.hm-grid-header {
+  display: flex;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.hm-col-week {
+  width: 100px;
+  padding: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #495057;
+  text-align: center;
+  border-right: 1px solid #dee2e6;
+}
+
+.hm-col-facility {
+  flex: 1;
+  padding: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #212529;
+  text-align: center;
+}
+
+.hm-grid-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.hm-row {
+  display: flex;
+  border-bottom: 1px solid #e9ecef;
+  transition: opacity 0.2s ease;
+}
+
+.hm-row:last-child {
+  border-bottom: none;
+}
+
+.hm-date-cell {
+  width: 100px;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  color: #495057;
+  text-align: center;
+  border-right: 1px solid #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hm-status-cell {
+  flex: 1;
+  cursor: pointer;
+  transition: filter 0.2s;
+  min-height: 28px;
+}
+
+.hm-status-cell:hover {
+  filter: brightness(1.15);
+}
+
+/* Color Tiers */
+.bg-closed { background-color: #212529 !important; }
+.bg-urgent { background-color: #e03131 !important; }
+.bg-ok     { background-color: #fcc419 !important; }
+.bg-open   { background-color: #2b8a3e !important; }
+
+/* Fade out class for legend hover effect */
+.hm-row.fade-out {
+  opacity: 0.2;
+}
+
+.hm-legend {
+  border: 1px solid #dee2e6;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: #f8f9fa;
+}
+
+.hm-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.hm-legend-item:last-child {
+  margin-bottom: 0;
+}
+
+.hm-legend-item:hover {
+  transform: translateX(4px);
+}
+
+.hm-color-box {
+  width: 24px;
+  height: 16px;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+.hm-legend-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.text-muted {
+  font-weight: 400;
+  color: #6c757d;
+}
+
+/* Tooltip */
+.hm-tooltip {
+  position: fixed;
+  background: #212529;
+  color: #ffffff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  pointer-events: none;
+  z-index: 9999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  transform: translate(-50%, -100%);
+  margin-top: -8px;
+}
+
+.hm-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #212529 transparent transparent transparent;
+}

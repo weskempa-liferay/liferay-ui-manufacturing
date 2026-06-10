@@ -1,3 +1,14 @@
 {
-  "fieldSets": []
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "showAccountRep",
+          "type": "checkbox",
+          "label": "Show Account Rep Section",
+          "defaultValue": true
+        }
+      ]
+    }
+  ]
 }
