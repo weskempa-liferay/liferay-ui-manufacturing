@@ -1,0 +1,27 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "name": "themeStyle",
+          "type": "select",
+          "label": "Theme Color Scheme",
+          "defaultValue": "navy-orange",
+          "dataType": "string",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "navy-orange",
+                "label": "Deep Navy & Molten Orange"
+              },
+              {
+                "value": "steel-blue",
+                "label": "Dark Steel & Electric Blue"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

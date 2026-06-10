@@ -1,0 +1,21 @@
+[#assign themeClass = "theme-navy-orange" /]
+[#if configuration.themeStyle?? && configuration.themeStyle == "steel-blue"]
+  [#assign themeClass = "theme-steel-blue" /]
+[/#if]
+
+<div class="hero ${themeClass}">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="pill-banner" data-lfr-editable-id="pill-banner" data-lfr-editable-type="text">SECURE PARTNER PORTAL</span>
+      <h1 data-lfr-editable-id="hero-title" data-lfr-editable-type="text">Manage Your Orders, Shipments, &amp; Invoices.</h1>
+      <p data-lfr-editable-id="hero-desc" data-lfr-editable-type="text">Welcome to the Charter Manufacturing Customer Portal. Log in to track your order status, download material certifications, view roll schedules, download invoices, and connect directly with your Account Representative.</p>
+      <div class="hero-cta">
+        <a class="btn-primary" href="#" data-lfr-editable-id="btn-request-access" data-lfr-editable-type="link">Request Access</a>
+        <a class="btn-secondary" href="#" data-lfr-editable-id="btn-contact-support" data-lfr-editable-type="link">Contact Support</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <lfr-drop-zone></lfr-drop-zone>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+/* Main container styling */
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.theme-navy-orange {
+  background: linear-gradient(135deg, #0B1B3D 0%, #061024 100%);
+}
+
+.theme-steel-blue {
+  background: linear-gradient(135deg, #0A1128 0%, #050917 100%);
+}
+
+/* Spotlight Glow Effects */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(40px);
+}
+
+.hero::before {
+  right: -100px;
+  top: -120px;
+  width: 550px;
+  height: 550px;
+}
+
+.hero::after {
+  left: -80px;
+  bottom: -160px;
+  width: 450px;
+  height: 450px;
+}
+
+.theme-navy-orange::before {
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.16), transparent 70%);
+}
+
+.theme-navy-orange::after {
+  background: radial-gradient(circle, rgba(0, 168, 255, 0.12), transparent 70%);
+}
+
+.theme-steel-blue::before {
+  background: radial-gradient(circle, rgba(0, 168, 255, 0.22), transparent 70%);
+}
+
+.theme-steel-blue::after {
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.08), transparent 70%);
+}
+
+/* Inner Layout */
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 8%;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+@media(max-width: 992px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding: 60px 5%;
+    gap: 40px;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Pill Banner */
+.pill-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #FF6B00;
+  border: 1px solid rgba(255, 107, 0, 0.25);
+  text-transform: uppercase;
+}
+
+.theme-steel-blue .pill-banner {
+  color: #00A8FF;
+  border-color: rgba(0, 168, 255, 0.25);
+}
+
+/* Typography */
+.hero h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 46px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+@media(max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 0;
+  margin-bottom: 32px;
+  max-width: 520px;
+  font-weight: 300;
+}
+
+/* Buttons and CTA */
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.hero-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.25rem;
+  border-radius: 50px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+/* Primary Button Styling */
+.theme-navy-orange .btn-primary {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF8C00 100%);
+  color: #ffffff !important;
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.35);
+}
+
+.theme-navy-orange .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.55);
+}
+
+.theme-steel-blue .btn-primary {
+  background: linear-gradient(135deg, #00A8FF 0%, #0077FF 100%);
+  color: #ffffff !important;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 168, 255, 0.35);
+}
+
+.theme-steel-blue .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 168, 255, 0.55);
+}
+
+.hero-cta .btn-primary:active {
+  transform: translateY(-1px);
+}
+
+/* Secondary Button Styling */
+.hero-cta .btn-secondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-cta .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.45);
+  transform: translateY(-3px);
+}
+
+.hero-cta .btn-secondary:active {
+  transform: translateY(-1px);
+}
+
+@media(max-width: 576px) {
+
+  .hero-cta,
+  .hero-cta a {
+    width: 100%;
+  }
+}
+
+/* Glassmorphic Login Card */
+.hero-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+@media(max-width: 768px) {
+  .hero-card {
+    padding: 24px;
+  }
+}
+
+/* Liferay Login Portlet Elements Styling inside the card */
+.hero-card label {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.hero-card input[type="text"],
+.hero-card input[type="password"] {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.hero-card input[type="text"]:focus,
+.hero-card input[type="password"]:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+.hero-card button,
+.hero-card input[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 50px;
+  border: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.theme-navy-orange .hero-card button,
+.theme-navy-orange .hero-card input[type="submit"] {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF8C00 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+}
+
+.theme-navy-orange .hero-card button:hover,
+.theme-navy-orange .hero-card input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 0, 0.45);
+}
+
+.theme-steel-blue .hero-card button,
+.theme-steel-blue .hero-card input[type="submit"] {
+  background: linear-gradient(135deg, #00A8FF 0%, #0077FF 100%);
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(0, 168, 255, 0.3);
+}
+
+.theme-steel-blue .hero-card button:hover,
+.theme-steel-blue .hero-card input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 168, 255, 0.45);
+}
+
+/* Ensure white text/links inside Portlet scoped elements */
+.portlet-layout #portlet_com_liferay_login_web_portlet_LoginPortlet .portlet-title-text,
+.portlet-layout #portlet_com_liferay_login_web_portlet_LoginPortlet label,
+.portlet-layout #portlet_com_liferay_login_web_portlet_LoginPortlet a,
+.portlet-layout #portlet_com_liferay_login_web_portlet_LoginPortlet span {
+  color: #ffffff !important;
+}
+
+.portlet-layout #portlet_com_liferay_login_web_portlet_LoginPortlet a {
+  text-decoration: underline;
+  font-size: 0.85rem;
+  transition: opacity 0.2s ease;
+}
+
+.portlet-layout #portlet_com_liferay_login_web_portlet_LoginPortlet a:hover {
+  opacity: 0.85;
+}
