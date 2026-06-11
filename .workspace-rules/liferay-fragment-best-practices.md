@@ -66,7 +66,28 @@ Optional Metadata:
 - **icon**: A Lexicon icon name used if no thumbnail is provided.
 - **type**: Usually `"component"`. Use `"input"` for form fragments.
 
-### 5.1 Form Fragments (Input Type)
+## 5. Configuration (`configuration.json`)
+
+### 5.1 Select Fields
+When creating a `"type": "select"` field in `configuration.json`, you **MUST** format the `typeOptions` correctly. Do NOT use an array directly for `typeOptions` or `options`. You must nest the array under `validValues` inside `typeOptions`.
+
+**Correct Format**:
+```json
+{
+  "name": "mySelect",
+  "type": "select",
+  "typeOptions": {
+    "validValues": [
+      {
+        "value": "option1",
+        "label": "Option 1"
+      }
+    ]
+  }
+}
+```
+
+### 5.2 Form Fragments (Input Type)
 
 Fragments of `"type": "input"` are used within Liferay Forms. They require additional `typeOptions` to define which field types they support:
 

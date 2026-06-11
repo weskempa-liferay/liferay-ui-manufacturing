@@ -6,6 +6,13 @@ if (fragmentElement) {
   let allOrders = [];
   let currentRollWeekFilter = null;
   let currentTypeFilter = 'all';
+  let currentPage = 1;
+  const pageSize = 10;
+
+  const paginationContainer = fragmentElement.querySelector('#orders-pagination');
+  const paginationInfo = fragmentElement.querySelector('#pagination-info');
+  const btnPrev = fragmentElement.querySelector('#btn-prev-page');
+  const btnNext = fragmentElement.querySelector('#btn-next-page');
 
   const getHeaders = () => {
     const headers = { 'Content-Type': 'application/json' };
@@ -53,10 +60,9 @@ if (fragmentElement) {
         return false;
       }
 
-      // 2. Type Filter
-      const orderTypes = getCustomField(order, 'Order Type');
-      const orderTypeStr = (Array.isArray(orderTypes) ? orderTypes.join(' ') : orderTypes).toLowerCase();
-      if (currentTypeFilter !== 'all' && !orderTypeStr.includes(currentTypeFilter)) {
+      // 2. Status Filter
+      const statusDetails = getCustomField(order, 'Status Details').toLowerCase();
+      if (currentTypeFilter !== 'all' && !statusDetails.includes(currentTypeFilter)) {
         return false;
       }
 
@@ -65,16 +71,30 @@ if (fragmentElement) {
 
     if (filteredOrders.length === 0) {
       tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; color: #64748b;">No orders found matching this filter.</td></tr>';
+      if (paginationContainer) paginationContainer.style.display = 'none';
       return;
     }
 
-    filteredOrders.forEach(order => {
+    // Pagination
+    const totalPages = Math.ceil(filteredOrders.length / pageSize);
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = Math.min(startIndex + pageSize, filteredOrders.length);
+    const paginatedOrders = filteredOrders.slice(startIndex, endIndex);
+
+    if (paginationContainer) {
+      paginationContainer.style.display = 'flex';
+      paginationInfo.textContent = `Showing ${startIndex + 1}-${endIndex} of ${filteredOrders.length}`;
+      btnPrev.disabled = currentPage === 1;
+      btnNext.disabled = currentPage === totalPages;
+    }
+
+    paginatedOrders.forEach(order => {
       const tr = document.createElement('tr');
       
       const orderTypes = getCustomField(order, 'Order Type');
-      const pType = (Array.isArray(orderTypes) ? orderTypes.join(' ') : orderTypes).toLowerCase();
-      tr.setAttribute('data-product-type', pType.includes('coil') ? 'coil' : 'sbq-bar');
-
       const soNum = order.id || 'N/A';
       const poNum = order.purchaseOrderNumber || 'N/A';
       
@@ -143,6 +163,23 @@ if (fragmentElement) {
   // Initialize
   fetchOrders();
 
+  // Pagination Event Listeners
+  if (btnPrev) {
+    btnPrev.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+      }
+    });
+  }
+
+  if (btnNext) {
+    btnNext.addEventListener('click', () => {
+      currentPage++;
+      renderTable();
+    });
+  }
+
   // Handle Type Filter Tabs
   filterTabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -150,13 +187,15 @@ if (fragmentElement) {
       tab.classList.add('active');
       
       currentTypeFilter = tab.getAttribute('data-filter');
+      currentPage = 1; // Reset to page 1 on filter
       renderTable();
     });
   });
 
   // Listen for roll-week filter events from the roll-week fragment
   window.addEventListener('filterByRollWeek', (e) => {
-    const targetWeek = e.detail && e.detail.week; // ISO Date String
+    // Standardize ISO strings for comparison (e.g. 2026-05-31T00:00:00Z -> 2026-05-31)
+    const targetWeek = e.detail && e.detail.week ? e.detail.week.split('T')[0] : null; 
     
     // Reset product type filter when a week is selected
     filterTabs.forEach(t => t.classList.remove('active'));
@@ -164,6 +203,7 @@ if (fragmentElement) {
     currentTypeFilter = 'all';
 
     currentRollWeekFilter = targetWeek || null;
+    currentPage = 1; // Reset to page 1 on filter
     renderTable();
   });
 }

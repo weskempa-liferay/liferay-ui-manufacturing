@@ -1,0 +1,67 @@
+[
+  {
+    "term": "Annealing",
+    "definition": "A heat treatment process that alters the physical and sometimes chemical properties of a material to increase its ductility and reduce its hardness, making it more workable.",
+    "category": "Processing"
+  },
+  {
+    "term": "Billet",
+    "definition": "A semi-finished length of metal that has a rectangular or square cross-section, created directly via continuous casting or extrusion or indirectly via hot rolling an ingot or bloom.",
+    "category": "Steelmaking"
+  },
+  {
+    "term": "Coil",
+    "definition": "A finished steel product such as sheet or strip which has been wound or coiled after rolling.",
+    "category": "Rolling"
+  },
+  {
+    "term": "Drawability",
+    "definition": "The measure of a material's ability to be drawn into a die cavity without cracking or thinning excessively.",
+    "category": "Mechanical Properties"
+  },
+  {
+    "term": "Electric Arc Furnace (EAF)",
+    "definition": "A furnace that heats charged material by means of an electric arc. Often used in steelmaking to melt recycled scrap steel.",
+    "category": "Steelmaking"
+  },
+  {
+    "term": "Ferrous",
+    "definition": "Metals, including iron, that are utilized in the production of steel. Any alloy containing iron.",
+    "category": "General"
+  },
+  {
+    "term": "Galvanizing",
+    "definition": "The process of applying a protective zinc coating to steel or iron to prevent rusting.",
+    "category": "Processing"
+  },
+  {
+    "term": "Hot Rolling",
+    "definition": "A metalworking process that occurs above the recrystallization temperature of the material, typically used to produce sheet metal or simple cross-sections, such as rail tracks.",
+    "category": "Rolling"
+  },
+  {
+    "term": "Ingot",
+    "definition": "A mass of metal cast into a size and shape such as a bar or block convenient to store, transport, and work into a semi-finished or finished product.",
+    "category": "Steelmaking"
+  },
+  {
+    "term": "Pickling",
+    "definition": "A metal surface treatment used to remove impurities, such as stains, inorganic contaminants, rust or scale from ferrous metals, copper, precious metals and aluminum alloys.",
+    "category": "Processing"
+  },
+  {
+    "term": "SBQ (Special Bar Quality)",
+    "definition": "A class of long steel products engineered for tough applications. Typically required when the end product needs excellent mechanical properties, straightness, and uniform composition.",
+    "category": "Products"
+  },
+  {
+    "term": "Tensile Strength",
+    "definition": "The maximum stress that a material can withstand while being stretched or pulled before breaking.",
+    "category": "Mechanical Properties"
+  },
+  {
+    "term": "Yield Strength",
+    "definition": "The stress at which a material begins to deform plastically. Prior to the yield point, the material will deform elastically and will return to its original shape when the applied stress is removed.",
+    "category": "Mechanical Properties"
+  }
+]

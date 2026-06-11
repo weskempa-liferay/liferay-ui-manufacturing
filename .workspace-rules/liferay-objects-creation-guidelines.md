@@ -47,6 +47,15 @@ When translating a logical data schema into Liferay Objects, use the following f
 | **Date** | Date | `Date` | `Date` | `birthDate` |
 | **DateTime** | Date-Time | `DateTime` | `DateTime` | `appointmentTime` |
 
+### 3.1 JSON Export/Import Specifics
+When creating or editing the Liferay Object Definition JSON directly for import, you must account for specific internal representations that Liferay expects:
+
+1. **Object Name Restrictions**: The `name` field in the root JSON must **NOT** contain spaces (e.g., use `"name": "GlossaryTerm"`, not `"Glossary Term"`).
+2. **Rich Text Fields**: While they act as text in the API, the definition requires `DBType` and `type` to be `"Clob"`. 
+   - `"DBType": "Clob"`, `"businessType": "RichText"`, `"type": "Clob"`
+3. **Picklist References**: When attaching a picklist to a field, you **CANNOT** use `listTypeDefinitionId` with a name. You must use the `listTypeDefinitionExternalReferenceCode` with the exact ERC string of the picklist created in Liferay.
+   - Example: `"listTypeDefinitionExternalReferenceCode": "1115720b-d3fa-2b6e-9cad-3775ece8307e"`
+
 ---
 
 ## 4. Crucial Naming & Casing Rules

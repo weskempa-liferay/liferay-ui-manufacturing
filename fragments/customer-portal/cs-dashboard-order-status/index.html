@@ -3,13 +3,14 @@
     <div class="orders-title-row">
       <h2 class="orders-title" data-lfr-editable-id="orders-title" data-lfr-editable-type="text">Recent Orders</h2>
       <div class="orders-actions-row">
-        <a data-lfr-editable-id="orders-view-all-link" data-lfr-editable-type="link"><a href="/web/customer-portal/orders" class="orders-view-all">View All Orders</a></a>
+        <a href="/web/customer-portal/orders" class="orders-view-all">View All Orders</a>
       </div>
     </div>
     <div class="orders-filter-tabs">
       <button class="filter-tab active" data-filter="all">All</button>
-      <button class="filter-tab" data-filter="coil">Coil</button>
-      <button class="filter-tab" data-filter="sbq-bar">SBQ-BAR</button>
+      <button class="filter-tab" data-filter="tracking">Tracking</button>
+      <button class="filter-tab" data-filter="partial ready">Partial Ready</button>
+      <button class="filter-tab" data-filter="ready">Ready</button>
     </div>
   </div>
 
@@ -29,7 +30,16 @@
       <tbody class="orders-tbody" id="orders-dynamic-tbody">
       </tbody>
     </table>
-    <div class="orders-loader" id="orders-loader" style="display: none;"><div class="orders-spinner"></div></div>
-    </table>
+    <div class="orders-loader" id="orders-loader" style="display: none;">
+      <div class="orders-spinner"></div>
+    </div>
+  </div>
+  
+  <div class="orders-pagination" id="orders-pagination" style="display: none;">
+    <span class="pagination-info" id="pagination-info">Showing 1-10 of 50</span>
+    <div class="pagination-controls">
+      <button class="mips-btn mips-btn-secondary" id="btn-prev-page" disabled>Previous</button>
+      <button class="mips-btn mips-btn-secondary" id="btn-next-page">Next</button>
+    </div>
   </div>
 </div>

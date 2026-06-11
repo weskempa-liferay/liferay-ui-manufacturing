@@ -1,0 +1,132 @@
+.comp-letters-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.comp-letters-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.comp-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.5rem 0;
+}
+
+.comp-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  color: #64748b;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.comp-letters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.comp-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: #cbd5e1;
+}
+
+.comp-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.comp-icon-wrapper svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* Icon Colors */
+.comp-icon-blue {
+  background: #eff6ff;
+  color: #3b82f6;
+}
+
+.comp-icon-green {
+  background: #f0fdf4;
+  color: #22c55e;
+}
+
+.comp-icon-orange {
+  background: #fff7ed;
+  color: #f97316;
+}
+
+.comp-icon-red {
+  background: #fef2f2;
+  color: #ef4444;
+}
+
+.comp-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.comp-card-title {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.comp-card-desc {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.comp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.comp-btn:hover {
+  background: #1e3a8a;
+  color: #ffffff !important;
+  border-color: #1e3a8a;
+}

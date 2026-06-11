@@ -1,0 +1,90 @@
+.hz-resources-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.hz-resources-banner {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.hz-resources-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.hz-resources-title {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.hz-resources-text {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.hz-resources-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hz-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.hz-btn-primary {
+  background: #1d4ed8;
+  color: #ffffff;
+  border: 1px solid #1d4ed8;
+}
+
+.hz-btn-primary:hover {
+  background: #1e40af;
+  border-color: #1e40af;
+  color: #ffffff !important;
+}
+
+.hz-btn-secondary {
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+
+.hz-btn-secondary:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+@media (max-width: 768px) {
+  .hz-resources-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

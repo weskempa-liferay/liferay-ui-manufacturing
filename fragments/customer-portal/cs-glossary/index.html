@@ -1,0 +1,40 @@
+<div class="glossary-wrapper">
+  
+  <div class="glossary-header">
+    <h2 class="glossary-title" data-lfr-editable-id="glossary-title" data-lfr-editable-type="text">Manufacturing Glossary</h2>
+    <p class="glossary-desc" data-lfr-editable-id="glossary-desc" data-lfr-editable-type="text">Search or browse our comprehensive index of steel manufacturing terms.</p>
+    
+    <div class="glossary-search-container">
+      <svg class="glossary-search-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <input type="text" id="glossary-search" class="glossary-search-input" placeholder="Search for a term (e.g. Billet, Pickling)..." autocomplete="off" />
+      <button class="glossary-search-clear" id="glossary-search-clear" aria-label="Clear search" style="display: none;">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <div class="glossary-alphabet-filter" id="glossary-alphabet-filter">
+      <!-- Letters A-Z will be injected via JS -->
+    </div>
+  </div>
+
+  <div class="glossary-content">
+    <div class="glossary-loader" id="glossary-loader">
+      <div class="glossary-spinner"></div>
+      <p>Loading terms...</p>
+    </div>
+    
+    <div class="glossary-results" id="glossary-results" style="display: none;">
+      <!-- Terms will be injected here -->
+    </div>
+
+    <div class="glossary-no-results" id="glossary-no-results" style="display: none;">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p>No terms found matching your search.</p>
+    </div>
+  </div>
+  
+</div>
